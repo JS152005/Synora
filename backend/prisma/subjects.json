@@ -1,0 +1,21 @@
+[
+  { "id": "S001", "code": "ANAT", "name": "Anatomy" },
+  { "id": "S002", "code": "PHYS", "name": "Physiology" },
+  { "id": "S003", "code": "BIOC", "name": "Biochemistry" },
+  { "id": "S004", "code": "PATH", "name": "Pathology" },
+  { "id": "S005", "code": "MICR", "name": "Microbiology" },
+  { "id": "S006", "code": "PHAR", "name": "Pharmacology" },
+  { "id": "S007", "code": "FMT", "name": "Forensic Medicine & Toxicology" },
+  { "id": "S008", "code": "PSM", "name": "Community Medicine (PSM)" },
+  { "id": "S009", "code": "OPHT", "name": "Ophthalmology" },
+  { "id": "S010", "code": "ENT", "name": "ENT (Otorhinolaryngology)" },
+  { "id": "S011", "code": "MED", "name": "General Medicine" },
+  { "id": "S012", "code": "SURG", "name": "General Surgery" },
+  { "id": "S013", "code": "OBGY", "name": "Obstetrics & Gynaecology" },
+  { "id": "S014", "code": "PED", "name": "Pediatrics" },
+  { "id": "S015", "code": "ORTH", "name": "Orthopaedics" },
+  { "id": "S016", "code": "ANES", "name": "Anaesthesiology" },
+  { "id": "S017", "code": "RAD", "name": "Radiodiagnosis" },
+  { "id": "S018", "code": "DERM", "name": "Dermatology, Venereology & Leprosy" },
+  { "id": "S019", "code": "PSY", "name": "Psychiatry" }
+]

@@ -1,0 +1,224 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserTopicType {
+  CAN_HELP
+  LEARNING
+}
+
+enum ConversationType {
+  DIRECT
+  GROUP
+}
+
+enum MessageType {
+  TEXT
+  IMAGE
+  FILE
+  AUDIO
+  VIDEO
+}
+
+enum MessageStatus {
+  SENT
+  DELIVERED
+  READ
+}
+
+enum RequestStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  CANCELLED
+}
+
+enum NotificationType {
+  STUDY_REQUEST
+  REQUEST_ACCEPTED
+  REQUEST_REJECTED
+}
+
+model User {
+  id           String  @id @default(cuid())
+  fullName     String
+  email        String  @unique
+  password     String
+  profileImage String?
+  bio          String?
+  college      String?
+  course       String?
+  year         String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userTopics UserTopic[]
+
+  sentRequests     StudyPartnerRequest[] @relation("RequestSender")
+  receivedRequests StudyPartnerRequest[] @relation("RequestReceiver")
+
+  notifications Notification[]
+
+  conversationMembers ConversationParticipant[]
+  sentMessages        Message[]                 @relation("MessageSender")
+}
+
+model Subject {
+  id   String @id @default(cuid())
+  code String @unique
+  name String
+
+  topics Topic[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Topic {
+  id    String @id @default(cuid())
+  code  String @unique
+  name  String
+  level Int
+
+  subjectId String
+  subject   Subject @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+
+  parentTopicId String?
+  parentTopic   Topic?  @relation("TopicHierarchy", fields: [parentTopicId], references: [id])
+  children      Topic[] @relation("TopicHierarchy")
+
+  userTopics UserTopic[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([subjectId])
+  @@index([parentTopicId])
+}
+
+model UserTopic {
+  id String @id @default(cuid())
+
+  userId  String
+  topicId String
+  type    UserTopicType
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  topic Topic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@unique([userId, topicId, type])
+  @@index([userId])
+  @@index([topicId])
+}
+
+model StudyPartnerRequest {
+  id String @id @default(cuid())
+
+  senderId   String
+  receiverId String
+
+  status RequestStatus @default(PENDING)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  sender   User @relation("RequestSender", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User @relation("RequestReceiver", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@unique([senderId, receiverId])
+  @@index([senderId])
+  @@index([receiverId])
+}
+
+model Notification {
+  id String @id @default(cuid())
+
+  userId String
+
+  title   String
+  message String
+
+  type NotificationType
+
+  isRead Boolean @default(false)
+
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model Conversation {
+  id String @id @default(cuid())
+
+  type  ConversationType @default(DIRECT)
+  title String?
+  image String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  participants ConversationParticipant[]
+  messages     Message[]
+
+  lastMessageId String?  @unique
+  lastMessage   Message? @relation("LastMessage", fields: [lastMessageId], references: [id], onDelete: SetNull)
+
+  @@index([updatedAt])
+}
+
+model ConversationParticipant {
+  id String @id @default(cuid())
+
+  conversationId String
+  userId         String
+
+  joinedAt   DateTime  @default(now())
+  lastReadAt DateTime?
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([conversationId, userId])
+  @@index([userId])
+  @@index([conversationId])
+}
+
+model Message {
+  id String @id @default(cuid())
+
+  conversationId String
+  senderId       String
+
+  type MessageType @default(TEXT)
+
+  content String?
+
+  fileUrl  String?
+  fileName String?
+  fileSize Int?
+
+  status    MessageStatus @default(SENT)
+  isDeleted Boolean       @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  sender       User         @relation("MessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+
+  lastForConversation Conversation? @relation("LastMessage")
+
+  @@index([conversationId, createdAt])
+  @@index([senderId])
+}

@@ -1,0 +1,4378 @@
+[
+  {
+    "id": "T0001",
+    "subjectId": "S001",
+    "name": "Upper Limb",
+    "parentTopicId": null,
+    "code": "TOP_T0001",
+    "level": 1
+  },
+  {
+    "id": "T0002",
+    "subjectId": "S001",
+    "name": "Shoulder Region",
+    "parentTopicId": "T0001",
+    "code": "TOP_T0002",
+    "level": 2
+  },
+  {
+    "id": "T0003",
+    "subjectId": "S001",
+    "name": "Rotator Cuff",
+    "parentTopicId": "T0002",
+    "code": "TOP_T0003",
+    "level": 3
+  },
+  {
+    "id": "T0004",
+    "subjectId": "S001",
+    "name": "Supraspinatus",
+    "parentTopicId": "T0003",
+    "code": "TOP_T0004",
+    "level": 4
+  },
+  {
+    "id": "T0005",
+    "subjectId": "S001",
+    "name": "Infraspinatus",
+    "parentTopicId": "T0003",
+    "code": "TOP_T0005",
+    "level": 4
+  },
+  {
+    "id": "T0006",
+    "subjectId": "S001",
+    "name": "Teres Minor",
+    "parentTopicId": "T0003",
+    "code": "TOP_T0006",
+    "level": 4
+  },
+  {
+    "id": "T0007",
+    "subjectId": "S001",
+    "name": "Subscapularis",
+    "parentTopicId": "T0003",
+    "code": "TOP_T0007",
+    "level": 4
+  },
+  {
+    "id": "T0008",
+    "subjectId": "S001",
+    "name": "Axilla",
+    "parentTopicId": "T0002",
+    "code": "TOP_T0008",
+    "level": 3
+  },
+  {
+    "id": "T0009",
+    "subjectId": "S001",
+    "name": "Brachial Plexus",
+    "parentTopicId": "T0002",
+    "code": "TOP_T0009",
+    "level": 3
+  },
+  {
+    "id": "T0010",
+    "subjectId": "S001",
+    "name": "Scapular Anastomosis",
+    "parentTopicId": "T0002",
+    "code": "TOP_T0010",
+    "level": 3
+  },
+  {
+    "id": "T0011",
+    "subjectId": "S001",
+    "name": "Arm",
+    "parentTopicId": "T0001",
+    "code": "TOP_T0011",
+    "level": 2
+  },
+  {
+    "id": "T0012",
+    "subjectId": "S001",
+    "name": "Biceps Brachii",
+    "parentTopicId": "T0011",
+    "code": "TOP_T0012",
+    "level": 3
+  },
+  {
+    "id": "T0013",
+    "subjectId": "S001",
+    "name": "Triceps Brachii",
+    "parentTopicId": "T0011",
+    "code": "TOP_T0013",
+    "level": 3
+  },
+  {
+    "id": "T0014",
+    "subjectId": "S001",
+    "name": "Radial Nerve in Arm",
+    "parentTopicId": "T0011",
+    "code": "TOP_T0014",
+    "level": 3
+  },
+  {
+    "id": "T0015",
+    "subjectId": "S001",
+    "name": "Forearm",
+    "parentTopicId": "T0001",
+    "code": "TOP_T0015",
+    "level": 2
+  },
+  {
+    "id": "T0016",
+    "subjectId": "S001",
+    "name": "Flexor Compartment",
+    "parentTopicId": "T0015",
+    "code": "TOP_T0016",
+    "level": 3
+  },
+  {
+    "id": "T0017",
+    "subjectId": "S001",
+    "name": "Extensor Compartment",
+    "parentTopicId": "T0015",
+    "code": "TOP_T0017",
+    "level": 3
+  },
+  {
+    "id": "T0018",
+    "subjectId": "S001",
+    "name": "Cubital Fossa",
+    "parentTopicId": "T0015",
+    "code": "TOP_T0018",
+    "level": 3
+  },
+  {
+    "id": "T0019",
+    "subjectId": "S001",
+    "name": "Wrist & Hand",
+    "parentTopicId": "T0001",
+    "code": "TOP_T0019",
+    "level": 2
+  },
+  {
+    "id": "T0020",
+    "subjectId": "S001",
+    "name": "Carpal Tunnel",
+    "parentTopicId": "T0019",
+    "code": "TOP_T0020",
+    "level": 3
+  },
+  {
+    "id": "T0021",
+    "subjectId": "S001",
+    "name": "Intrinsic Muscles of Hand",
+    "parentTopicId": "T0019",
+    "code": "TOP_T0021",
+    "level": 3
+  },
+  {
+    "id": "T0022",
+    "subjectId": "S001",
+    "name": "Anatomical Snuffbox",
+    "parentTopicId": "T0019",
+    "code": "TOP_T0022",
+    "level": 3
+  },
+  {
+    "id": "T0023",
+    "subjectId": "S001",
+    "name": "Lower Limb",
+    "parentTopicId": null,
+    "code": "TOP_T0023",
+    "level": 1
+  },
+  {
+    "id": "T0024",
+    "subjectId": "S001",
+    "name": "Gluteal Region",
+    "parentTopicId": "T0023",
+    "code": "TOP_T0024",
+    "level": 2
+  },
+  {
+    "id": "T0025",
+    "subjectId": "S001",
+    "name": "Gluteal Muscles",
+    "parentTopicId": "T0024",
+    "code": "TOP_T0025",
+    "level": 3
+  },
+  {
+    "id": "T0026",
+    "subjectId": "S001",
+    "name": "Sciatic Nerve",
+    "parentTopicId": "T0024",
+    "code": "TOP_T0026",
+    "level": 3
+  },
+  {
+    "id": "T0027",
+    "subjectId": "S001",
+    "name": "Thigh",
+    "parentTopicId": "T0023",
+    "code": "TOP_T0027",
+    "level": 2
+  },
+  {
+    "id": "T0028",
+    "subjectId": "S001",
+    "name": "Femoral Triangle",
+    "parentTopicId": "T0027",
+    "code": "TOP_T0028",
+    "level": 3
+  },
+  {
+    "id": "T0029",
+    "subjectId": "S001",
+    "name": "Quadriceps Femoris",
+    "parentTopicId": "T0027",
+    "code": "TOP_T0029",
+    "level": 3
+  },
+  {
+    "id": "T0030",
+    "subjectId": "S001",
+    "name": "Hamstrings",
+    "parentTopicId": "T0027",
+    "code": "TOP_T0030",
+    "level": 3
+  },
+  {
+    "id": "T0031",
+    "subjectId": "S001",
+    "name": "Adductor Canal",
+    "parentTopicId": "T0027",
+    "code": "TOP_T0031",
+    "level": 3
+  },
+  {
+    "id": "T0032",
+    "subjectId": "S001",
+    "name": "Leg & Ankle",
+    "parentTopicId": "T0023",
+    "code": "TOP_T0032",
+    "level": 2
+  },
+  {
+    "id": "T0033",
+    "subjectId": "S001",
+    "name": "Popliteal Fossa",
+    "parentTopicId": "T0032",
+    "code": "TOP_T0033",
+    "level": 3
+  },
+  {
+    "id": "T0034",
+    "subjectId": "S001",
+    "name": "Anterior Compartment of Leg",
+    "parentTopicId": "T0032",
+    "code": "TOP_T0034",
+    "level": 3
+  },
+  {
+    "id": "T0035",
+    "subjectId": "S001",
+    "name": "Posterior Compartment of Leg",
+    "parentTopicId": "T0032",
+    "code": "TOP_T0035",
+    "level": 3
+  },
+  {
+    "id": "T0036",
+    "subjectId": "S001",
+    "name": "Foot",
+    "parentTopicId": "T0023",
+    "code": "TOP_T0036",
+    "level": 2
+  },
+  {
+    "id": "T0037",
+    "subjectId": "S001",
+    "name": "Arches of Foot",
+    "parentTopicId": "T0036",
+    "code": "TOP_T0037",
+    "level": 3
+  },
+  {
+    "id": "T0038",
+    "subjectId": "S001",
+    "name": "Intrinsic Muscles of Foot",
+    "parentTopicId": "T0036",
+    "code": "TOP_T0038",
+    "level": 3
+  },
+  {
+    "id": "T0039",
+    "subjectId": "S001",
+    "name": "Thorax",
+    "parentTopicId": null,
+    "code": "TOP_T0039",
+    "level": 1
+  },
+  {
+    "id": "T0040",
+    "subjectId": "S001",
+    "name": "Thoracic Wall",
+    "parentTopicId": "T0039",
+    "code": "TOP_T0040",
+    "level": 2
+  },
+  {
+    "id": "T0041",
+    "subjectId": "S001",
+    "name": "Intercostal Space",
+    "parentTopicId": "T0040",
+    "code": "TOP_T0041",
+    "level": 3
+  },
+  {
+    "id": "T0042",
+    "subjectId": "S001",
+    "name": "Diaphragm",
+    "parentTopicId": "T0040",
+    "code": "TOP_T0042",
+    "level": 3
+  },
+  {
+    "id": "T0043",
+    "subjectId": "S001",
+    "name": "Heart & Great Vessels",
+    "parentTopicId": "T0039",
+    "code": "TOP_T0043",
+    "level": 2
+  },
+  {
+    "id": "T0044",
+    "subjectId": "S001",
+    "name": "Chambers of Heart",
+    "parentTopicId": "T0043",
+    "code": "TOP_T0044",
+    "level": 3
+  },
+  {
+    "id": "T0045",
+    "subjectId": "S001",
+    "name": "Conducting System",
+    "parentTopicId": "T0043",
+    "code": "TOP_T0045",
+    "level": 3
+  },
+  {
+    "id": "T0046",
+    "subjectId": "S001",
+    "name": "Coronary Circulation",
+    "parentTopicId": "T0043",
+    "code": "TOP_T0046",
+    "level": 3
+  },
+  {
+    "id": "T0047",
+    "subjectId": "S001",
+    "name": "Pericardium",
+    "parentTopicId": "T0043",
+    "code": "TOP_T0047",
+    "level": 3
+  },
+  {
+    "id": "T0048",
+    "subjectId": "S001",
+    "name": "Lungs & Mediastinum",
+    "parentTopicId": "T0039",
+    "code": "TOP_T0048",
+    "level": 2
+  },
+  {
+    "id": "T0049",
+    "subjectId": "S001",
+    "name": "Bronchopulmonary Segments",
+    "parentTopicId": "T0048",
+    "code": "TOP_T0049",
+    "level": 3
+  },
+  {
+    "id": "T0050",
+    "subjectId": "S001",
+    "name": "Pleura",
+    "parentTopicId": "T0048",
+    "code": "TOP_T0050",
+    "level": 3
+  },
+  {
+    "id": "T0051",
+    "subjectId": "S001",
+    "name": "Mediastinum Subdivisions",
+    "parentTopicId": "T0048",
+    "code": "TOP_T0051",
+    "level": 3
+  },
+  {
+    "id": "T0052",
+    "subjectId": "S001",
+    "name": "Abdomen",
+    "parentTopicId": null,
+    "code": "TOP_T0052",
+    "level": 1
+  },
+  {
+    "id": "T0053",
+    "subjectId": "S001",
+    "name": "Anterior Abdominal Wall",
+    "parentTopicId": "T0052",
+    "code": "TOP_T0053",
+    "level": 2
+  },
+  {
+    "id": "T0054",
+    "subjectId": "S001",
+    "name": "Inguinal Canal",
+    "parentTopicId": "T0053",
+    "code": "TOP_T0054",
+    "level": 3
+  },
+  {
+    "id": "T0055",
+    "subjectId": "S001",
+    "name": "Rectus Sheath",
+    "parentTopicId": "T0053",
+    "code": "TOP_T0055",
+    "level": 3
+  },
+  {
+    "id": "T0056",
+    "subjectId": "S001",
+    "name": "GI Organs",
+    "parentTopicId": "T0052",
+    "code": "TOP_T0056",
+    "level": 2
+  },
+  {
+    "id": "T0057",
+    "subjectId": "S001",
+    "name": "Stomach",
+    "parentTopicId": "T0056",
+    "code": "TOP_T0057",
+    "level": 3
+  },
+  {
+    "id": "T0058",
+    "subjectId": "S001",
+    "name": "Small Intestine",
+    "parentTopicId": "T0056",
+    "code": "TOP_T0058",
+    "level": 3
+  },
+  {
+    "id": "T0059",
+    "subjectId": "S001",
+    "name": "Large Intestine",
+    "parentTopicId": "T0056",
+    "code": "TOP_T0059",
+    "level": 3
+  },
+  {
+    "id": "T0060",
+    "subjectId": "S001",
+    "name": "Liver, Pancreas & Spleen",
+    "parentTopicId": "T0052",
+    "code": "TOP_T0060",
+    "level": 2
+  },
+  {
+    "id": "T0061",
+    "subjectId": "S001",
+    "name": "Liver Segments",
+    "parentTopicId": "T0060",
+    "code": "TOP_T0061",
+    "level": 3
+  },
+  {
+    "id": "T0062",
+    "subjectId": "S001",
+    "name": "Portal Vein Tributaries",
+    "parentTopicId": "T0060",
+    "code": "TOP_T0062",
+    "level": 3
+  },
+  {
+    "id": "T0063",
+    "subjectId": "S001",
+    "name": "Peritoneum",
+    "parentTopicId": "T0052",
+    "code": "TOP_T0063",
+    "level": 2
+  },
+  {
+    "id": "T0064",
+    "subjectId": "S001",
+    "name": "Greater & Lesser Sac",
+    "parentTopicId": "T0063",
+    "code": "TOP_T0064",
+    "level": 3
+  },
+  {
+    "id": "T0065",
+    "subjectId": "S001",
+    "name": "Peritoneal Reflections",
+    "parentTopicId": "T0063",
+    "code": "TOP_T0065",
+    "level": 3
+  },
+  {
+    "id": "T0066",
+    "subjectId": "S001",
+    "name": "Pelvis & Perineum",
+    "parentTopicId": null,
+    "code": "TOP_T0066",
+    "level": 1
+  },
+  {
+    "id": "T0067",
+    "subjectId": "S001",
+    "name": "Pelvic Diaphragm",
+    "parentTopicId": "T0066",
+    "code": "TOP_T0067",
+    "level": 2
+  },
+  {
+    "id": "T0068",
+    "subjectId": "S001",
+    "name": "Female Pelvic Organs",
+    "parentTopicId": "T0066",
+    "code": "TOP_T0068",
+    "level": 2
+  },
+  {
+    "id": "T0069",
+    "subjectId": "S001",
+    "name": "Male Pelvic Organs",
+    "parentTopicId": "T0066",
+    "code": "TOP_T0069",
+    "level": 2
+  },
+  {
+    "id": "T0070",
+    "subjectId": "S001",
+    "name": "Perineal Spaces",
+    "parentTopicId": "T0066",
+    "code": "TOP_T0070",
+    "level": 2
+  },
+  {
+    "id": "T0071",
+    "subjectId": "S001",
+    "name": "Head & Neck",
+    "parentTopicId": null,
+    "code": "TOP_T0071",
+    "level": 1
+  },
+  {
+    "id": "T0072",
+    "subjectId": "S001",
+    "name": "Skull",
+    "parentTopicId": "T0071",
+    "code": "TOP_T0072",
+    "level": 2
+  },
+  {
+    "id": "T0073",
+    "subjectId": "S001",
+    "name": "Cranial Fossae",
+    "parentTopicId": "T0072",
+    "code": "TOP_T0073",
+    "level": 3
+  },
+  {
+    "id": "T0074",
+    "subjectId": "S001",
+    "name": "Foramina & Contents",
+    "parentTopicId": "T0072",
+    "code": "TOP_T0074",
+    "level": 3
+  },
+  {
+    "id": "T0075",
+    "subjectId": "S001",
+    "name": "Face & Scalp",
+    "parentTopicId": "T0071",
+    "code": "TOP_T0075",
+    "level": 2
+  },
+  {
+    "id": "T0076",
+    "subjectId": "S001",
+    "name": "Facial Muscles",
+    "parentTopicId": "T0075",
+    "code": "TOP_T0076",
+    "level": 3
+  },
+  {
+    "id": "T0077",
+    "subjectId": "S001",
+    "name": "Layers of Scalp",
+    "parentTopicId": "T0075",
+    "code": "TOP_T0077",
+    "level": 3
+  },
+  {
+    "id": "T0078",
+    "subjectId": "S001",
+    "name": "Triangles of Neck",
+    "parentTopicId": "T0071",
+    "code": "TOP_T0078",
+    "level": 2
+  },
+  {
+    "id": "T0079",
+    "subjectId": "S001",
+    "name": "Anterior Triangle",
+    "parentTopicId": "T0078",
+    "code": "TOP_T0079",
+    "level": 3
+  },
+  {
+    "id": "T0080",
+    "subjectId": "S001",
+    "name": "Posterior Triangle",
+    "parentTopicId": "T0078",
+    "code": "TOP_T0080",
+    "level": 3
+  },
+  {
+    "id": "T0081",
+    "subjectId": "S001",
+    "name": "Cranial Nerves",
+    "parentTopicId": "T0071",
+    "code": "TOP_T0081",
+    "level": 2
+  },
+  {
+    "id": "T0082",
+    "subjectId": "S001",
+    "name": "Trigeminal Nerve",
+    "parentTopicId": "T0081",
+    "code": "TOP_T0082",
+    "level": 3
+  },
+  {
+    "id": "T0083",
+    "subjectId": "S001",
+    "name": "Facial Nerve",
+    "parentTopicId": "T0081",
+    "code": "TOP_T0083",
+    "level": 3
+  },
+  {
+    "id": "T0084",
+    "subjectId": "S001",
+    "name": "Vagus Nerve",
+    "parentTopicId": "T0081",
+    "code": "TOP_T0084",
+    "level": 3
+  },
+  {
+    "id": "T0085",
+    "subjectId": "S001",
+    "name": "Hypoglossal Nerve",
+    "parentTopicId": "T0081",
+    "code": "TOP_T0085",
+    "level": 3
+  },
+  {
+    "id": "T0086",
+    "subjectId": "S001",
+    "name": "Neuroanatomy",
+    "parentTopicId": null,
+    "code": "TOP_T0086",
+    "level": 1
+  },
+  {
+    "id": "T0087",
+    "subjectId": "S001",
+    "name": "Spinal Cord",
+    "parentTopicId": "T0086",
+    "code": "TOP_T0087",
+    "level": 2
+  },
+  {
+    "id": "T0088",
+    "subjectId": "S001",
+    "name": "Ascending Tracts",
+    "parentTopicId": "T0087",
+    "code": "TOP_T0088",
+    "level": 3
+  },
+  {
+    "id": "T0089",
+    "subjectId": "S001",
+    "name": "Descending Tracts",
+    "parentTopicId": "T0087",
+    "code": "TOP_T0089",
+    "level": 3
+  },
+  {
+    "id": "T0090",
+    "subjectId": "S001",
+    "name": "Brainstem",
+    "parentTopicId": "T0086",
+    "code": "TOP_T0090",
+    "level": 2
+  },
+  {
+    "id": "T0091",
+    "subjectId": "S001",
+    "name": "Medulla",
+    "parentTopicId": "T0090",
+    "code": "TOP_T0091",
+    "level": 3
+  },
+  {
+    "id": "T0092",
+    "subjectId": "S001",
+    "name": "Pons",
+    "parentTopicId": "T0090",
+    "code": "TOP_T0092",
+    "level": 3
+  },
+  {
+    "id": "T0093",
+    "subjectId": "S001",
+    "name": "Midbrain",
+    "parentTopicId": "T0090",
+    "code": "TOP_T0093",
+    "level": 3
+  },
+  {
+    "id": "T0094",
+    "subjectId": "S001",
+    "name": "Cerebrum",
+    "parentTopicId": "T0086",
+    "code": "TOP_T0094",
+    "level": 2
+  },
+  {
+    "id": "T0095",
+    "subjectId": "S001",
+    "name": "Cerebral Cortex Areas",
+    "parentTopicId": "T0094",
+    "code": "TOP_T0095",
+    "level": 3
+  },
+  {
+    "id": "T0096",
+    "subjectId": "S001",
+    "name": "Basal Ganglia",
+    "parentTopicId": "T0094",
+    "code": "TOP_T0096",
+    "level": 3
+  },
+  {
+    "id": "T0097",
+    "subjectId": "S001",
+    "name": "Limbic System",
+    "parentTopicId": "T0094",
+    "code": "TOP_T0097",
+    "level": 3
+  },
+  {
+    "id": "T0098",
+    "subjectId": "S001",
+    "name": "Ventricular System & CSF Circulation",
+    "parentTopicId": "T0086",
+    "code": "TOP_T0098",
+    "level": 2
+  },
+  {
+    "id": "T0099",
+    "subjectId": "S001",
+    "name": "Histology",
+    "parentTopicId": null,
+    "code": "TOP_T0099",
+    "level": 1
+  },
+  {
+    "id": "T0100",
+    "subjectId": "S001",
+    "name": "Basic Tissues",
+    "parentTopicId": "T0099",
+    "code": "TOP_T0100",
+    "level": 2
+  },
+  {
+    "id": "T0101",
+    "subjectId": "S001",
+    "name": "Epithelium",
+    "parentTopicId": "T0100",
+    "code": "TOP_T0101",
+    "level": 3
+  },
+  {
+    "id": "T0102",
+    "subjectId": "S001",
+    "name": "Connective Tissue",
+    "parentTopicId": "T0100",
+    "code": "TOP_T0102",
+    "level": 3
+  },
+  {
+    "id": "T0103",
+    "subjectId": "S001",
+    "name": "Muscle Tissue",
+    "parentTopicId": "T0100",
+    "code": "TOP_T0103",
+    "level": 3
+  },
+  {
+    "id": "T0104",
+    "subjectId": "S001",
+    "name": "Nervous Tissue",
+    "parentTopicId": "T0100",
+    "code": "TOP_T0104",
+    "level": 3
+  },
+  {
+    "id": "T0105",
+    "subjectId": "S001",
+    "name": "Organ Histology",
+    "parentTopicId": "T0099",
+    "code": "TOP_T0105",
+    "level": 2
+  },
+  {
+    "id": "T0106",
+    "subjectId": "S001",
+    "name": "Cardiovascular Histology",
+    "parentTopicId": "T0105",
+    "code": "TOP_T0106",
+    "level": 3
+  },
+  {
+    "id": "T0107",
+    "subjectId": "S001",
+    "name": "Respiratory Histology",
+    "parentTopicId": "T0105",
+    "code": "TOP_T0107",
+    "level": 3
+  },
+  {
+    "id": "T0108",
+    "subjectId": "S001",
+    "name": "GI Histology",
+    "parentTopicId": "T0105",
+    "code": "TOP_T0108",
+    "level": 3
+  },
+  {
+    "id": "T0109",
+    "subjectId": "S001",
+    "name": "Endocrine Histology",
+    "parentTopicId": "T0105",
+    "code": "TOP_T0109",
+    "level": 3
+  },
+  {
+    "id": "T0110",
+    "subjectId": "S001",
+    "name": "Embryology",
+    "parentTopicId": null,
+    "code": "TOP_T0110",
+    "level": 1
+  },
+  {
+    "id": "T0111",
+    "subjectId": "S001",
+    "name": "Gametogenesis & Fertilization",
+    "parentTopicId": "T0110",
+    "code": "TOP_T0111",
+    "level": 2
+  },
+  {
+    "id": "T0112",
+    "subjectId": "S001",
+    "name": "Early Development",
+    "parentTopicId": "T0110",
+    "code": "TOP_T0112",
+    "level": 2
+  },
+  {
+    "id": "T0113",
+    "subjectId": "S001",
+    "name": "Cleavage",
+    "parentTopicId": "T0112",
+    "code": "TOP_T0113",
+    "level": 3
+  },
+  {
+    "id": "T0114",
+    "subjectId": "S001",
+    "name": "Gastrulation",
+    "parentTopicId": "T0112",
+    "code": "TOP_T0114",
+    "level": 3
+  },
+  {
+    "id": "T0115",
+    "subjectId": "S001",
+    "name": "Neurulation",
+    "parentTopicId": "T0112",
+    "code": "TOP_T0115",
+    "level": 3
+  },
+  {
+    "id": "T0116",
+    "subjectId": "S001",
+    "name": "Cardiovascular Development",
+    "parentTopicId": "T0110",
+    "code": "TOP_T0116",
+    "level": 2
+  },
+  {
+    "id": "T0117",
+    "subjectId": "S001",
+    "name": "Heart Tube Formation",
+    "parentTopicId": "T0116",
+    "code": "TOP_T0117",
+    "level": 3
+  },
+  {
+    "id": "T0118",
+    "subjectId": "S001",
+    "name": "Septation Defects",
+    "parentTopicId": "T0116",
+    "code": "TOP_T0118",
+    "level": 3
+  },
+  {
+    "id": "T0119",
+    "subjectId": "S001",
+    "name": "CNS Development & Neural Tube Defects",
+    "parentTopicId": "T0110",
+    "code": "TOP_T0119",
+    "level": 2
+  },
+  {
+    "id": "T0120",
+    "subjectId": "S001",
+    "name": "Genetics",
+    "parentTopicId": null,
+    "code": "TOP_T0120",
+    "level": 1
+  },
+  {
+    "id": "T0121",
+    "subjectId": "S001",
+    "name": "Chromosomal Disorders",
+    "parentTopicId": "T0120",
+    "code": "TOP_T0121",
+    "level": 2
+  },
+  {
+    "id": "T0122",
+    "subjectId": "S001",
+    "name": "Down Syndrome",
+    "parentTopicId": "T0121",
+    "code": "TOP_T0122",
+    "level": 3
+  },
+  {
+    "id": "T0123",
+    "subjectId": "S001",
+    "name": "Turner Syndrome",
+    "parentTopicId": "T0121",
+    "code": "TOP_T0123",
+    "level": 3
+  },
+  {
+    "id": "T0124",
+    "subjectId": "S001",
+    "name": "Klinefelter Syndrome",
+    "parentTopicId": "T0121",
+    "code": "TOP_T0124",
+    "level": 3
+  },
+  {
+    "id": "T0125",
+    "subjectId": "S001",
+    "name": "Mendelian Inheritance Patterns",
+    "parentTopicId": "T0120",
+    "code": "TOP_T0125",
+    "level": 2
+  },
+  {
+    "id": "T0126",
+    "subjectId": "S002",
+    "name": "General Physiology",
+    "parentTopicId": null,
+    "code": "TOP_T0126",
+    "level": 1
+  },
+  {
+    "id": "T0127",
+    "subjectId": "S002",
+    "name": "Cell Membrane Transport",
+    "parentTopicId": "T0126",
+    "code": "TOP_T0127",
+    "level": 2
+  },
+  {
+    "id": "T0128",
+    "subjectId": "S002",
+    "name": "Resting Membrane Potential",
+    "parentTopicId": "T0126",
+    "code": "TOP_T0128",
+    "level": 2
+  },
+  {
+    "id": "T0129",
+    "subjectId": "S002",
+    "name": "Blood",
+    "parentTopicId": null,
+    "code": "TOP_T0129",
+    "level": 1
+  },
+  {
+    "id": "T0130",
+    "subjectId": "S002",
+    "name": "RBC Physiology",
+    "parentTopicId": "T0129",
+    "code": "TOP_T0130",
+    "level": 2
+  },
+  {
+    "id": "T0131",
+    "subjectId": "S002",
+    "name": "WBC & Immunity",
+    "parentTopicId": "T0129",
+    "code": "TOP_T0131",
+    "level": 2
+  },
+  {
+    "id": "T0132",
+    "subjectId": "S002",
+    "name": "Hemostasis",
+    "parentTopicId": "T0129",
+    "code": "TOP_T0132",
+    "level": 2
+  },
+  {
+    "id": "T0133",
+    "subjectId": "S002",
+    "name": "Blood Groups",
+    "parentTopicId": "T0129",
+    "code": "TOP_T0133",
+    "level": 2
+  },
+  {
+    "id": "T0134",
+    "subjectId": "S002",
+    "name": "Nerve-Muscle Physiology",
+    "parentTopicId": null,
+    "code": "TOP_T0134",
+    "level": 1
+  },
+  {
+    "id": "T0135",
+    "subjectId": "S002",
+    "name": "Neuromuscular Junction",
+    "parentTopicId": "T0134",
+    "code": "TOP_T0135",
+    "level": 2
+  },
+  {
+    "id": "T0136",
+    "subjectId": "S002",
+    "name": "Muscle Contraction Mechanism",
+    "parentTopicId": "T0134",
+    "code": "TOP_T0136",
+    "level": 2
+  },
+  {
+    "id": "T0137",
+    "subjectId": "S002",
+    "name": "Cardiovascular System",
+    "parentTopicId": null,
+    "code": "TOP_T0137",
+    "level": 1
+  },
+  {
+    "id": "T0138",
+    "subjectId": "S002",
+    "name": "Heart",
+    "parentTopicId": "T0137",
+    "code": "TOP_T0138",
+    "level": 2
+  },
+  {
+    "id": "T0139",
+    "subjectId": "S002",
+    "name": "Cardiac Cycle",
+    "parentTopicId": "T0138",
+    "code": "TOP_T0139",
+    "level": 3
+  },
+  {
+    "id": "T0140",
+    "subjectId": "S002",
+    "name": "Cardiac Output",
+    "parentTopicId": "T0138",
+    "code": "TOP_T0140",
+    "level": 3
+  },
+  {
+    "id": "T0141",
+    "subjectId": "S002",
+    "name": "ECG Interpretation",
+    "parentTopicId": "T0138",
+    "code": "TOP_T0141",
+    "level": 3
+  },
+  {
+    "id": "T0142",
+    "subjectId": "S002",
+    "name": "Heart Sounds",
+    "parentTopicId": "T0138",
+    "code": "TOP_T0142",
+    "level": 3
+  },
+  {
+    "id": "T0143",
+    "subjectId": "S002",
+    "name": "Blood Vessels",
+    "parentTopicId": "T0137",
+    "code": "TOP_T0143",
+    "level": 2
+  },
+  {
+    "id": "T0144",
+    "subjectId": "S002",
+    "name": "Blood Pressure Regulation",
+    "parentTopicId": "T0143",
+    "code": "TOP_T0144",
+    "level": 3
+  },
+  {
+    "id": "T0145",
+    "subjectId": "S002",
+    "name": "Microcirculation",
+    "parentTopicId": "T0143",
+    "code": "TOP_T0145",
+    "level": 3
+  },
+  {
+    "id": "T0146",
+    "subjectId": "S002",
+    "name": "Venous Return",
+    "parentTopicId": "T0143",
+    "code": "TOP_T0146",
+    "level": 3
+  },
+  {
+    "id": "T0147",
+    "subjectId": "S002",
+    "name": "Respiratory System",
+    "parentTopicId": null,
+    "code": "TOP_T0147",
+    "level": 1
+  },
+  {
+    "id": "T0148",
+    "subjectId": "S002",
+    "name": "Mechanics of Breathing",
+    "parentTopicId": "T0147",
+    "code": "TOP_T0148",
+    "level": 2
+  },
+  {
+    "id": "T0149",
+    "subjectId": "S002",
+    "name": "Lung Volumes & Capacities",
+    "parentTopicId": "T0148",
+    "code": "TOP_T0149",
+    "level": 3
+  },
+  {
+    "id": "T0150",
+    "subjectId": "S002",
+    "name": "Compliance & Surfactant",
+    "parentTopicId": "T0148",
+    "code": "TOP_T0150",
+    "level": 3
+  },
+  {
+    "id": "T0151",
+    "subjectId": "S002",
+    "name": "Gas Exchange & Transport",
+    "parentTopicId": "T0147",
+    "code": "TOP_T0151",
+    "level": 2
+  },
+  {
+    "id": "T0152",
+    "subjectId": "S002",
+    "name": "Oxygen Transport",
+    "parentTopicId": "T0151",
+    "code": "TOP_T0152",
+    "level": 3
+  },
+  {
+    "id": "T0153",
+    "subjectId": "S002",
+    "name": "CO2 Transport",
+    "parentTopicId": "T0151",
+    "code": "TOP_T0153",
+    "level": 3
+  },
+  {
+    "id": "T0154",
+    "subjectId": "S002",
+    "name": "Regulation of Respiration",
+    "parentTopicId": "T0147",
+    "code": "TOP_T0154",
+    "level": 2
+  },
+  {
+    "id": "T0155",
+    "subjectId": "S002",
+    "name": "Renal System",
+    "parentTopicId": null,
+    "code": "TOP_T0155",
+    "level": 1
+  },
+  {
+    "id": "T0156",
+    "subjectId": "S002",
+    "name": "Glomerular Filtration",
+    "parentTopicId": "T0155",
+    "code": "TOP_T0156",
+    "level": 2
+  },
+  {
+    "id": "T0157",
+    "subjectId": "S002",
+    "name": "Tubular Reabsorption & Secretion",
+    "parentTopicId": "T0155",
+    "code": "TOP_T0157",
+    "level": 2
+  },
+  {
+    "id": "T0158",
+    "subjectId": "S002",
+    "name": "Acid-Base Balance",
+    "parentTopicId": "T0155",
+    "code": "TOP_T0158",
+    "level": 2
+  },
+  {
+    "id": "T0159",
+    "subjectId": "S002",
+    "name": "Renal Compensation",
+    "parentTopicId": "T0158",
+    "code": "TOP_T0159",
+    "level": 3
+  },
+  {
+    "id": "T0160",
+    "subjectId": "S002",
+    "name": "Micturition Reflex",
+    "parentTopicId": "T0155",
+    "code": "TOP_T0160",
+    "level": 2
+  },
+  {
+    "id": "T0161",
+    "subjectId": "S002",
+    "name": "Gastrointestinal System",
+    "parentTopicId": null,
+    "code": "TOP_T0161",
+    "level": 1
+  },
+  {
+    "id": "T0162",
+    "subjectId": "S002",
+    "name": "Digestion & Secretions",
+    "parentTopicId": "T0161",
+    "code": "TOP_T0162",
+    "level": 2
+  },
+  {
+    "id": "T0163",
+    "subjectId": "S002",
+    "name": "Gastric Secretion",
+    "parentTopicId": "T0162",
+    "code": "TOP_T0163",
+    "level": 3
+  },
+  {
+    "id": "T0164",
+    "subjectId": "S002",
+    "name": "Pancreatic Secretion",
+    "parentTopicId": "T0162",
+    "code": "TOP_T0164",
+    "level": 3
+  },
+  {
+    "id": "T0165",
+    "subjectId": "S002",
+    "name": "Bile Secretion",
+    "parentTopicId": "T0162",
+    "code": "TOP_T0165",
+    "level": 3
+  },
+  {
+    "id": "T0166",
+    "subjectId": "S002",
+    "name": "Absorption",
+    "parentTopicId": "T0161",
+    "code": "TOP_T0166",
+    "level": 2
+  },
+  {
+    "id": "T0167",
+    "subjectId": "S002",
+    "name": "GI Motility",
+    "parentTopicId": "T0161",
+    "code": "TOP_T0167",
+    "level": 2
+  },
+  {
+    "id": "T0168",
+    "subjectId": "S002",
+    "name": "Endocrine System",
+    "parentTopicId": null,
+    "code": "TOP_T0168",
+    "level": 1
+  },
+  {
+    "id": "T0169",
+    "subjectId": "S002",
+    "name": "Pituitary Gland",
+    "parentTopicId": "T0168",
+    "code": "TOP_T0169",
+    "level": 2
+  },
+  {
+    "id": "T0170",
+    "subjectId": "S002",
+    "name": "Thyroid Gland",
+    "parentTopicId": "T0168",
+    "code": "TOP_T0170",
+    "level": 2
+  },
+  {
+    "id": "T0171",
+    "subjectId": "S002",
+    "name": "Adrenal Gland",
+    "parentTopicId": "T0168",
+    "code": "TOP_T0171",
+    "level": 2
+  },
+  {
+    "id": "T0172",
+    "subjectId": "S002",
+    "name": "Pancreas & Insulin",
+    "parentTopicId": "T0168",
+    "code": "TOP_T0172",
+    "level": 2
+  },
+  {
+    "id": "T0173",
+    "subjectId": "S002",
+    "name": "Nervous System",
+    "parentTopicId": null,
+    "code": "TOP_T0173",
+    "level": 1
+  },
+  {
+    "id": "T0174",
+    "subjectId": "S002",
+    "name": "Reflexes",
+    "parentTopicId": "T0173",
+    "code": "TOP_T0174",
+    "level": 2
+  },
+  {
+    "id": "T0175",
+    "subjectId": "S002",
+    "name": "Stretch Reflex",
+    "parentTopicId": "T0174",
+    "code": "TOP_T0175",
+    "level": 3
+  },
+  {
+    "id": "T0176",
+    "subjectId": "S002",
+    "name": "Withdrawal Reflex",
+    "parentTopicId": "T0174",
+    "code": "TOP_T0176",
+    "level": 3
+  },
+  {
+    "id": "T0177",
+    "subjectId": "S002",
+    "name": "Sensory Pathways",
+    "parentTopicId": "T0173",
+    "code": "TOP_T0177",
+    "level": 2
+  },
+  {
+    "id": "T0178",
+    "subjectId": "S002",
+    "name": "Dorsal Column Pathway",
+    "parentTopicId": "T0177",
+    "code": "TOP_T0178",
+    "level": 3
+  },
+  {
+    "id": "T0179",
+    "subjectId": "S002",
+    "name": "Spinothalamic Pathway",
+    "parentTopicId": "T0177",
+    "code": "TOP_T0179",
+    "level": 3
+  },
+  {
+    "id": "T0180",
+    "subjectId": "S002",
+    "name": "Motor Pathways",
+    "parentTopicId": "T0173",
+    "code": "TOP_T0180",
+    "level": 2
+  },
+  {
+    "id": "T0181",
+    "subjectId": "S002",
+    "name": "Pyramidal Tract",
+    "parentTopicId": "T0180",
+    "code": "TOP_T0181",
+    "level": 3
+  },
+  {
+    "id": "T0182",
+    "subjectId": "S002",
+    "name": "Extrapyramidal System",
+    "parentTopicId": "T0180",
+    "code": "TOP_T0182",
+    "level": 3
+  },
+  {
+    "id": "T0183",
+    "subjectId": "S002",
+    "name": "Higher Functions",
+    "parentTopicId": "T0173",
+    "code": "TOP_T0183",
+    "level": 2
+  },
+  {
+    "id": "T0184",
+    "subjectId": "S002",
+    "name": "Memory & Learning",
+    "parentTopicId": "T0183",
+    "code": "TOP_T0184",
+    "level": 3
+  },
+  {
+    "id": "T0185",
+    "subjectId": "S002",
+    "name": "Sleep Physiology",
+    "parentTopicId": "T0183",
+    "code": "TOP_T0185",
+    "level": 3
+  },
+  {
+    "id": "T0186",
+    "subjectId": "S002",
+    "name": "Special Senses",
+    "parentTopicId": null,
+    "code": "TOP_T0186",
+    "level": 1
+  },
+  {
+    "id": "T0187",
+    "subjectId": "S002",
+    "name": "Vision",
+    "parentTopicId": "T0186",
+    "code": "TOP_T0187",
+    "level": 2
+  },
+  {
+    "id": "T0188",
+    "subjectId": "S002",
+    "name": "Hearing",
+    "parentTopicId": "T0186",
+    "code": "TOP_T0188",
+    "level": 2
+  },
+  {
+    "id": "T0189",
+    "subjectId": "S002",
+    "name": "Taste & Smell",
+    "parentTopicId": "T0186",
+    "code": "TOP_T0189",
+    "level": 2
+  },
+  {
+    "id": "T0190",
+    "subjectId": "S002",
+    "name": "Reproductive Physiology",
+    "parentTopicId": null,
+    "code": "TOP_T0190",
+    "level": 1
+  },
+  {
+    "id": "T0191",
+    "subjectId": "S002",
+    "name": "Menstrual Cycle",
+    "parentTopicId": "T0190",
+    "code": "TOP_T0191",
+    "level": 2
+  },
+  {
+    "id": "T0192",
+    "subjectId": "S002",
+    "name": "Spermatogenesis",
+    "parentTopicId": "T0190",
+    "code": "TOP_T0192",
+    "level": 2
+  },
+  {
+    "id": "T0193",
+    "subjectId": "S002",
+    "name": "Pregnancy Physiology",
+    "parentTopicId": "T0190",
+    "code": "TOP_T0193",
+    "level": 2
+  },
+  {
+    "id": "T0194",
+    "subjectId": "S003",
+    "name": "Cell Biology & Biomolecules",
+    "parentTopicId": null,
+    "code": "TOP_T0194",
+    "level": 1
+  },
+  {
+    "id": "T0195",
+    "subjectId": "S003",
+    "name": "Enzymes",
+    "parentTopicId": null,
+    "code": "TOP_T0195",
+    "level": 1
+  },
+  {
+    "id": "T0196",
+    "subjectId": "S003",
+    "name": "Enzyme Kinetics",
+    "parentTopicId": "T0195",
+    "code": "TOP_T0196",
+    "level": 2
+  },
+  {
+    "id": "T0197",
+    "subjectId": "S003",
+    "name": "Enzyme Regulation",
+    "parentTopicId": "T0195",
+    "code": "TOP_T0197",
+    "level": 2
+  },
+  {
+    "id": "T0198",
+    "subjectId": "S003",
+    "name": "Clinical Enzymology",
+    "parentTopicId": "T0195",
+    "code": "TOP_T0198",
+    "level": 2
+  },
+  {
+    "id": "T0199",
+    "subjectId": "S003",
+    "name": "Carbohydrate Metabolism",
+    "parentTopicId": null,
+    "code": "TOP_T0199",
+    "level": 1
+  },
+  {
+    "id": "T0200",
+    "subjectId": "S003",
+    "name": "Glycolysis",
+    "parentTopicId": "T0199",
+    "code": "TOP_T0200",
+    "level": 2
+  },
+  {
+    "id": "T0201",
+    "subjectId": "S003",
+    "name": "TCA Cycle",
+    "parentTopicId": "T0199",
+    "code": "TOP_T0201",
+    "level": 2
+  },
+  {
+    "id": "T0202",
+    "subjectId": "S003",
+    "name": "Glycogen Metabolism",
+    "parentTopicId": "T0199",
+    "code": "TOP_T0202",
+    "level": 2
+  },
+  {
+    "id": "T0203",
+    "subjectId": "S003",
+    "name": "Gluconeogenesis",
+    "parentTopicId": "T0199",
+    "code": "TOP_T0203",
+    "level": 2
+  },
+  {
+    "id": "T0204",
+    "subjectId": "S003",
+    "name": "Lipid Metabolism",
+    "parentTopicId": null,
+    "code": "TOP_T0204",
+    "level": 1
+  },
+  {
+    "id": "T0205",
+    "subjectId": "S003",
+    "name": "Beta Oxidation",
+    "parentTopicId": "T0204",
+    "code": "TOP_T0205",
+    "level": 2
+  },
+  {
+    "id": "T0206",
+    "subjectId": "S003",
+    "name": "Lipoprotein Metabolism",
+    "parentTopicId": "T0204",
+    "code": "TOP_T0206",
+    "level": 2
+  },
+  {
+    "id": "T0207",
+    "subjectId": "S003",
+    "name": "Ketone Body Metabolism",
+    "parentTopicId": "T0204",
+    "code": "TOP_T0207",
+    "level": 2
+  },
+  {
+    "id": "T0208",
+    "subjectId": "S003",
+    "name": "Cholesterol Metabolism",
+    "parentTopicId": "T0204",
+    "code": "TOP_T0208",
+    "level": 2
+  },
+  {
+    "id": "T0209",
+    "subjectId": "S003",
+    "name": "Protein & Amino Acid Metabolism",
+    "parentTopicId": null,
+    "code": "TOP_T0209",
+    "level": 1
+  },
+  {
+    "id": "T0210",
+    "subjectId": "S003",
+    "name": "Urea Cycle",
+    "parentTopicId": "T0209",
+    "code": "TOP_T0210",
+    "level": 2
+  },
+  {
+    "id": "T0211",
+    "subjectId": "S003",
+    "name": "Amino Acid Disorders",
+    "parentTopicId": "T0209",
+    "code": "TOP_T0211",
+    "level": 2
+  },
+  {
+    "id": "T0212",
+    "subjectId": "S003",
+    "name": "Nucleic Acid Metabolism",
+    "parentTopicId": null,
+    "code": "TOP_T0212",
+    "level": 1
+  },
+  {
+    "id": "T0213",
+    "subjectId": "S003",
+    "name": "Purine Metabolism",
+    "parentTopicId": "T0212",
+    "code": "TOP_T0213",
+    "level": 2
+  },
+  {
+    "id": "T0214",
+    "subjectId": "S003",
+    "name": "Pyrimidine Metabolism",
+    "parentTopicId": "T0212",
+    "code": "TOP_T0214",
+    "level": 2
+  },
+  {
+    "id": "T0215",
+    "subjectId": "S003",
+    "name": "Molecular Biology",
+    "parentTopicId": null,
+    "code": "TOP_T0215",
+    "level": 1
+  },
+  {
+    "id": "T0216",
+    "subjectId": "S003",
+    "name": "DNA Replication",
+    "parentTopicId": "T0215",
+    "code": "TOP_T0216",
+    "level": 2
+  },
+  {
+    "id": "T0217",
+    "subjectId": "S003",
+    "name": "Transcription",
+    "parentTopicId": "T0215",
+    "code": "TOP_T0217",
+    "level": 2
+  },
+  {
+    "id": "T0218",
+    "subjectId": "S003",
+    "name": "Translation",
+    "parentTopicId": "T0215",
+    "code": "TOP_T0218",
+    "level": 2
+  },
+  {
+    "id": "T0219",
+    "subjectId": "S003",
+    "name": "Mutations & Repair",
+    "parentTopicId": "T0215",
+    "code": "TOP_T0219",
+    "level": 2
+  },
+  {
+    "id": "T0220",
+    "subjectId": "S003",
+    "name": "Vitamins & Minerals",
+    "parentTopicId": null,
+    "code": "TOP_T0220",
+    "level": 1
+  },
+  {
+    "id": "T0221",
+    "subjectId": "S003",
+    "name": "Fat Soluble Vitamins",
+    "parentTopicId": "T0220",
+    "code": "TOP_T0221",
+    "level": 2
+  },
+  {
+    "id": "T0222",
+    "subjectId": "S003",
+    "name": "Water Soluble Vitamins",
+    "parentTopicId": "T0220",
+    "code": "TOP_T0222",
+    "level": 2
+  },
+  {
+    "id": "T0223",
+    "subjectId": "S003",
+    "name": "Trace Elements",
+    "parentTopicId": "T0220",
+    "code": "TOP_T0223",
+    "level": 2
+  },
+  {
+    "id": "T0224",
+    "subjectId": "S003",
+    "name": "Hormones - Biochemical Basis",
+    "parentTopicId": null,
+    "code": "TOP_T0224",
+    "level": 1
+  },
+  {
+    "id": "T0225",
+    "subjectId": "S003",
+    "name": "Metabolic Integration",
+    "parentTopicId": null,
+    "code": "TOP_T0225",
+    "level": 1
+  },
+  {
+    "id": "T0226",
+    "subjectId": "S003",
+    "name": "Diabetes Mellitus Biochemistry",
+    "parentTopicId": "T0225",
+    "code": "TOP_T0226",
+    "level": 2
+  },
+  {
+    "id": "T0227",
+    "subjectId": "S003",
+    "name": "Starvation Metabolism",
+    "parentTopicId": "T0225",
+    "code": "TOP_T0227",
+    "level": 2
+  },
+  {
+    "id": "T0228",
+    "subjectId": "S003",
+    "name": "Organ Function Tests",
+    "parentTopicId": null,
+    "code": "TOP_T0228",
+    "level": 1
+  },
+  {
+    "id": "T0229",
+    "subjectId": "S003",
+    "name": "Liver Function Tests",
+    "parentTopicId": "T0228",
+    "code": "TOP_T0229",
+    "level": 2
+  },
+  {
+    "id": "T0230",
+    "subjectId": "S003",
+    "name": "Renal Function Tests",
+    "parentTopicId": "T0228",
+    "code": "TOP_T0230",
+    "level": 2
+  },
+  {
+    "id": "T0231",
+    "subjectId": "S003",
+    "name": "Cancer Biology & Free Radicals",
+    "parentTopicId": null,
+    "code": "TOP_T0231",
+    "level": 1
+  },
+  {
+    "id": "T0232",
+    "subjectId": "S003",
+    "name": "Nutrition",
+    "parentTopicId": null,
+    "code": "TOP_T0232",
+    "level": 1
+  },
+  {
+    "id": "T0233",
+    "subjectId": "S003",
+    "name": "Balanced Diet",
+    "parentTopicId": "T0232",
+    "code": "TOP_T0233",
+    "level": 2
+  },
+  {
+    "id": "T0234",
+    "subjectId": "S003",
+    "name": "Energy Requirements",
+    "parentTopicId": "T0232",
+    "code": "TOP_T0234",
+    "level": 2
+  },
+  {
+    "id": "T0235",
+    "subjectId": "S004",
+    "name": "General Pathology",
+    "parentTopicId": null,
+    "code": "TOP_T0235",
+    "level": 1
+  },
+  {
+    "id": "T0236",
+    "subjectId": "S004",
+    "name": "Cell Injury & Adaptation",
+    "parentTopicId": "T0235",
+    "code": "TOP_T0236",
+    "level": 2
+  },
+  {
+    "id": "T0237",
+    "subjectId": "S004",
+    "name": "Inflammation",
+    "parentTopicId": "T0235",
+    "code": "TOP_T0237",
+    "level": 2
+  },
+  {
+    "id": "T0238",
+    "subjectId": "S004",
+    "name": "Acute Inflammation",
+    "parentTopicId": "T0237",
+    "code": "TOP_T0238",
+    "level": 3
+  },
+  {
+    "id": "T0239",
+    "subjectId": "S004",
+    "name": "Chronic Inflammation",
+    "parentTopicId": "T0237",
+    "code": "TOP_T0239",
+    "level": 3
+  },
+  {
+    "id": "T0240",
+    "subjectId": "S004",
+    "name": "Wound Healing & Repair",
+    "parentTopicId": "T0235",
+    "code": "TOP_T0240",
+    "level": 2
+  },
+  {
+    "id": "T0241",
+    "subjectId": "S004",
+    "name": "Hemodynamic Disorders",
+    "parentTopicId": "T0235",
+    "code": "TOP_T0241",
+    "level": 2
+  },
+  {
+    "id": "T0242",
+    "subjectId": "S004",
+    "name": "Thrombosis",
+    "parentTopicId": "T0241",
+    "code": "TOP_T0242",
+    "level": 3
+  },
+  {
+    "id": "T0243",
+    "subjectId": "S004",
+    "name": "Embolism",
+    "parentTopicId": "T0241",
+    "code": "TOP_T0243",
+    "level": 3
+  },
+  {
+    "id": "T0244",
+    "subjectId": "S004",
+    "name": "Infarction",
+    "parentTopicId": "T0241",
+    "code": "TOP_T0244",
+    "level": 3
+  },
+  {
+    "id": "T0245",
+    "subjectId": "S004",
+    "name": "Shock",
+    "parentTopicId": "T0241",
+    "code": "TOP_T0245",
+    "level": 3
+  },
+  {
+    "id": "T0246",
+    "subjectId": "S004",
+    "name": "Neoplasia",
+    "parentTopicId": "T0235",
+    "code": "TOP_T0246",
+    "level": 2
+  },
+  {
+    "id": "T0247",
+    "subjectId": "S004",
+    "name": "Benign Tumors",
+    "parentTopicId": "T0246",
+    "code": "TOP_T0247",
+    "level": 3
+  },
+  {
+    "id": "T0248",
+    "subjectId": "S004",
+    "name": "Malignant Tumors",
+    "parentTopicId": "T0246",
+    "code": "TOP_T0248",
+    "level": 3
+  },
+  {
+    "id": "T0249",
+    "subjectId": "S004",
+    "name": "Tumor Grading & Staging",
+    "parentTopicId": "T0246",
+    "code": "TOP_T0249",
+    "level": 3
+  },
+  {
+    "id": "T0250",
+    "subjectId": "S004",
+    "name": "Immunopathology",
+    "parentTopicId": "T0235",
+    "code": "TOP_T0250",
+    "level": 2
+  },
+  {
+    "id": "T0251",
+    "subjectId": "S004",
+    "name": "Hypersensitivity Reactions",
+    "parentTopicId": "T0250",
+    "code": "TOP_T0251",
+    "level": 3
+  },
+  {
+    "id": "T0252",
+    "subjectId": "S004",
+    "name": "Autoimmune Disorders",
+    "parentTopicId": "T0250",
+    "code": "TOP_T0252",
+    "level": 3
+  },
+  {
+    "id": "T0253",
+    "subjectId": "S004",
+    "name": "Systemic Pathology",
+    "parentTopicId": null,
+    "code": "TOP_T0253",
+    "level": 1
+  },
+  {
+    "id": "T0254",
+    "subjectId": "S004",
+    "name": "Cardiovascular Pathology",
+    "parentTopicId": "T0253",
+    "code": "TOP_T0254",
+    "level": 2
+  },
+  {
+    "id": "T0255",
+    "subjectId": "S004",
+    "name": "Atherosclerosis",
+    "parentTopicId": "T0254",
+    "code": "TOP_T0255",
+    "level": 3
+  },
+  {
+    "id": "T0256",
+    "subjectId": "S004",
+    "name": "Ischemic Heart Disease",
+    "parentTopicId": "T0254",
+    "code": "TOP_T0256",
+    "level": 3
+  },
+  {
+    "id": "T0257",
+    "subjectId": "S004",
+    "name": "Respiratory Pathology",
+    "parentTopicId": "T0253",
+    "code": "TOP_T0257",
+    "level": 2
+  },
+  {
+    "id": "T0258",
+    "subjectId": "S004",
+    "name": "Pneumonia",
+    "parentTopicId": "T0257",
+    "code": "TOP_T0258",
+    "level": 3
+  },
+  {
+    "id": "T0259",
+    "subjectId": "S004",
+    "name": "COPD",
+    "parentTopicId": "T0257",
+    "code": "TOP_T0259",
+    "level": 3
+  },
+  {
+    "id": "T0260",
+    "subjectId": "S004",
+    "name": "Lung Tumors",
+    "parentTopicId": "T0257",
+    "code": "TOP_T0260",
+    "level": 3
+  },
+  {
+    "id": "T0261",
+    "subjectId": "S004",
+    "name": "GI & Liver Pathology",
+    "parentTopicId": "T0253",
+    "code": "TOP_T0261",
+    "level": 2
+  },
+  {
+    "id": "T0262",
+    "subjectId": "S004",
+    "name": "Peptic Ulcer Disease",
+    "parentTopicId": "T0261",
+    "code": "TOP_T0262",
+    "level": 3
+  },
+  {
+    "id": "T0263",
+    "subjectId": "S004",
+    "name": "Cirrhosis",
+    "parentTopicId": "T0261",
+    "code": "TOP_T0263",
+    "level": 3
+  },
+  {
+    "id": "T0264",
+    "subjectId": "S004",
+    "name": "Hepatitis",
+    "parentTopicId": "T0261",
+    "code": "TOP_T0264",
+    "level": 3
+  },
+  {
+    "id": "T0265",
+    "subjectId": "S004",
+    "name": "Renal Pathology",
+    "parentTopicId": "T0253",
+    "code": "TOP_T0265",
+    "level": 2
+  },
+  {
+    "id": "T0266",
+    "subjectId": "S004",
+    "name": "Glomerulonephritis",
+    "parentTopicId": "T0265",
+    "code": "TOP_T0266",
+    "level": 3
+  },
+  {
+    "id": "T0267",
+    "subjectId": "S004",
+    "name": "Renal Tumors",
+    "parentTopicId": "T0265",
+    "code": "TOP_T0267",
+    "level": 3
+  },
+  {
+    "id": "T0268",
+    "subjectId": "S004",
+    "name": "Hematopathology",
+    "parentTopicId": "T0253",
+    "code": "TOP_T0268",
+    "level": 2
+  },
+  {
+    "id": "T0269",
+    "subjectId": "S004",
+    "name": "Anemia",
+    "parentTopicId": "T0268",
+    "code": "TOP_T0269",
+    "level": 3
+  },
+  {
+    "id": "T0270",
+    "subjectId": "S004",
+    "name": "Leukemia",
+    "parentTopicId": "T0268",
+    "code": "TOP_T0270",
+    "level": 3
+  },
+  {
+    "id": "T0271",
+    "subjectId": "S004",
+    "name": "Lymphoma",
+    "parentTopicId": "T0268",
+    "code": "TOP_T0271",
+    "level": 3
+  },
+  {
+    "id": "T0272",
+    "subjectId": "S004",
+    "name": "Endocrine Pathology",
+    "parentTopicId": "T0253",
+    "code": "TOP_T0272",
+    "level": 2
+  },
+  {
+    "id": "T0273",
+    "subjectId": "S004",
+    "name": "Thyroid Disorders",
+    "parentTopicId": "T0272",
+    "code": "TOP_T0273",
+    "level": 3
+  },
+  {
+    "id": "T0274",
+    "subjectId": "S004",
+    "name": "Diabetes Pathology",
+    "parentTopicId": "T0272",
+    "code": "TOP_T0274",
+    "level": 3
+  },
+  {
+    "id": "T0275",
+    "subjectId": "S004",
+    "name": "Reproductive System Pathology",
+    "parentTopicId": "T0253",
+    "code": "TOP_T0275",
+    "level": 2
+  },
+  {
+    "id": "T0276",
+    "subjectId": "S004",
+    "name": "Cervical Pathology",
+    "parentTopicId": "T0275",
+    "code": "TOP_T0276",
+    "level": 3
+  },
+  {
+    "id": "T0277",
+    "subjectId": "S004",
+    "name": "Breast Pathology",
+    "parentTopicId": "T0275",
+    "code": "TOP_T0277",
+    "level": 3
+  },
+  {
+    "id": "T0278",
+    "subjectId": "S004",
+    "name": "Testicular Pathology",
+    "parentTopicId": "T0275",
+    "code": "TOP_T0278",
+    "level": 3
+  },
+  {
+    "id": "T0279",
+    "subjectId": "S004",
+    "name": "CNS & Musculoskeletal Pathology",
+    "parentTopicId": "T0253",
+    "code": "TOP_T0279",
+    "level": 2
+  },
+  {
+    "id": "T0280",
+    "subjectId": "S004",
+    "name": "Brain Tumors",
+    "parentTopicId": "T0279",
+    "code": "TOP_T0280",
+    "level": 3
+  },
+  {
+    "id": "T0281",
+    "subjectId": "S004",
+    "name": "Bone Tumors",
+    "parentTopicId": "T0279",
+    "code": "TOP_T0281",
+    "level": 3
+  },
+  {
+    "id": "T0282",
+    "subjectId": "S005",
+    "name": "General Microbiology",
+    "parentTopicId": null,
+    "code": "TOP_T0282",
+    "level": 1
+  },
+  {
+    "id": "T0283",
+    "subjectId": "S005",
+    "name": "Bacterial Morphology",
+    "parentTopicId": "T0282",
+    "code": "TOP_T0283",
+    "level": 2
+  },
+  {
+    "id": "T0284",
+    "subjectId": "S005",
+    "name": "Bacterial Classification",
+    "parentTopicId": "T0282",
+    "code": "TOP_T0284",
+    "level": 2
+  },
+  {
+    "id": "T0285",
+    "subjectId": "S005",
+    "name": "Sterilization & Disinfection",
+    "parentTopicId": "T0282",
+    "code": "TOP_T0285",
+    "level": 2
+  },
+  {
+    "id": "T0286",
+    "subjectId": "S005",
+    "name": "Immunology",
+    "parentTopicId": null,
+    "code": "TOP_T0286",
+    "level": 1
+  },
+  {
+    "id": "T0287",
+    "subjectId": "S005",
+    "name": "Antigen-Antibody Reactions",
+    "parentTopicId": "T0286",
+    "code": "TOP_T0287",
+    "level": 2
+  },
+  {
+    "id": "T0288",
+    "subjectId": "S005",
+    "name": "Vaccines",
+    "parentTopicId": "T0286",
+    "code": "TOP_T0288",
+    "level": 2
+  },
+  {
+    "id": "T0289",
+    "subjectId": "S005",
+    "name": "Immunodeficiency Disorders",
+    "parentTopicId": "T0286",
+    "code": "TOP_T0289",
+    "level": 2
+  },
+  {
+    "id": "T0290",
+    "subjectId": "S005",
+    "name": "Systemic Bacteriology",
+    "parentTopicId": null,
+    "code": "TOP_T0290",
+    "level": 1
+  },
+  {
+    "id": "T0291",
+    "subjectId": "S005",
+    "name": "Gram Positive Cocci",
+    "parentTopicId": "T0290",
+    "code": "TOP_T0291",
+    "level": 2
+  },
+  {
+    "id": "T0292",
+    "subjectId": "S005",
+    "name": "Staphylococcus",
+    "parentTopicId": "T0291",
+    "code": "TOP_T0292",
+    "level": 3
+  },
+  {
+    "id": "T0293",
+    "subjectId": "S005",
+    "name": "Streptococcus",
+    "parentTopicId": "T0291",
+    "code": "TOP_T0293",
+    "level": 3
+  },
+  {
+    "id": "T0294",
+    "subjectId": "S005",
+    "name": "Gram Negative Bacilli",
+    "parentTopicId": "T0290",
+    "code": "TOP_T0294",
+    "level": 2
+  },
+  {
+    "id": "T0295",
+    "subjectId": "S005",
+    "name": "E. coli",
+    "parentTopicId": "T0294",
+    "code": "TOP_T0295",
+    "level": 3
+  },
+  {
+    "id": "T0296",
+    "subjectId": "S005",
+    "name": "Salmonella",
+    "parentTopicId": "T0294",
+    "code": "TOP_T0296",
+    "level": 3
+  },
+  {
+    "id": "T0297",
+    "subjectId": "S005",
+    "name": "Vibrio cholerae",
+    "parentTopicId": "T0294",
+    "code": "TOP_T0297",
+    "level": 3
+  },
+  {
+    "id": "T0298",
+    "subjectId": "S005",
+    "name": "Mycobacteria",
+    "parentTopicId": "T0290",
+    "code": "TOP_T0298",
+    "level": 2
+  },
+  {
+    "id": "T0299",
+    "subjectId": "S005",
+    "name": "Mycobacterium tuberculosis",
+    "parentTopicId": "T0298",
+    "code": "TOP_T0299",
+    "level": 3
+  },
+  {
+    "id": "T0300",
+    "subjectId": "S005",
+    "name": "Mycobacterium leprae",
+    "parentTopicId": "T0298",
+    "code": "TOP_T0300",
+    "level": 3
+  },
+  {
+    "id": "T0301",
+    "subjectId": "S005",
+    "name": "Spirochetes",
+    "parentTopicId": "T0290",
+    "code": "TOP_T0301",
+    "level": 2
+  },
+  {
+    "id": "T0302",
+    "subjectId": "S005",
+    "name": "Treponema pallidum",
+    "parentTopicId": "T0301",
+    "code": "TOP_T0302",
+    "level": 3
+  },
+  {
+    "id": "T0303",
+    "subjectId": "S005",
+    "name": "Virology",
+    "parentTopicId": null,
+    "code": "TOP_T0303",
+    "level": 1
+  },
+  {
+    "id": "T0304",
+    "subjectId": "S005",
+    "name": "General Virology",
+    "parentTopicId": "T0303",
+    "code": "TOP_T0304",
+    "level": 2
+  },
+  {
+    "id": "T0305",
+    "subjectId": "S005",
+    "name": "Hepatitis Viruses",
+    "parentTopicId": "T0303",
+    "code": "TOP_T0305",
+    "level": 2
+  },
+  {
+    "id": "T0306",
+    "subjectId": "S005",
+    "name": "HIV",
+    "parentTopicId": "T0303",
+    "code": "TOP_T0306",
+    "level": 2
+  },
+  {
+    "id": "T0307",
+    "subjectId": "S005",
+    "name": "Respiratory Viruses",
+    "parentTopicId": "T0303",
+    "code": "TOP_T0307",
+    "level": 2
+  },
+  {
+    "id": "T0308",
+    "subjectId": "S005",
+    "name": "Arboviruses",
+    "parentTopicId": "T0303",
+    "code": "TOP_T0308",
+    "level": 2
+  },
+  {
+    "id": "T0309",
+    "subjectId": "S005",
+    "name": "Dengue Virus",
+    "parentTopicId": "T0308",
+    "code": "TOP_T0309",
+    "level": 3
+  },
+  {
+    "id": "T0310",
+    "subjectId": "S005",
+    "name": "Chikungunya Virus",
+    "parentTopicId": "T0308",
+    "code": "TOP_T0310",
+    "level": 3
+  },
+  {
+    "id": "T0311",
+    "subjectId": "S005",
+    "name": "Mycology",
+    "parentTopicId": null,
+    "code": "TOP_T0311",
+    "level": 1
+  },
+  {
+    "id": "T0312",
+    "subjectId": "S005",
+    "name": "Superficial Fungal Infections",
+    "parentTopicId": "T0311",
+    "code": "TOP_T0312",
+    "level": 2
+  },
+  {
+    "id": "T0313",
+    "subjectId": "S005",
+    "name": "Systemic Fungal Infections",
+    "parentTopicId": "T0311",
+    "code": "TOP_T0313",
+    "level": 2
+  },
+  {
+    "id": "T0314",
+    "subjectId": "S005",
+    "name": "Parasitology",
+    "parentTopicId": null,
+    "code": "TOP_T0314",
+    "level": 1
+  },
+  {
+    "id": "T0315",
+    "subjectId": "S005",
+    "name": "Protozoa",
+    "parentTopicId": "T0314",
+    "code": "TOP_T0315",
+    "level": 2
+  },
+  {
+    "id": "T0316",
+    "subjectId": "S005",
+    "name": "Plasmodium (Malaria)",
+    "parentTopicId": "T0315",
+    "code": "TOP_T0316",
+    "level": 3
+  },
+  {
+    "id": "T0317",
+    "subjectId": "S005",
+    "name": "Entamoeba histolytica",
+    "parentTopicId": "T0315",
+    "code": "TOP_T0317",
+    "level": 3
+  },
+  {
+    "id": "T0318",
+    "subjectId": "S005",
+    "name": "Helminths",
+    "parentTopicId": "T0314",
+    "code": "TOP_T0318",
+    "level": 2
+  },
+  {
+    "id": "T0319",
+    "subjectId": "S005",
+    "name": "Nematodes",
+    "parentTopicId": "T0318",
+    "code": "TOP_T0319",
+    "level": 3
+  },
+  {
+    "id": "T0320",
+    "subjectId": "S005",
+    "name": "Cestodes",
+    "parentTopicId": "T0318",
+    "code": "TOP_T0320",
+    "level": 3
+  },
+  {
+    "id": "T0321",
+    "subjectId": "S005",
+    "name": "Trematodes",
+    "parentTopicId": "T0318",
+    "code": "TOP_T0321",
+    "level": 3
+  },
+  {
+    "id": "T0322",
+    "subjectId": "S005",
+    "name": "Hospital Infection Control",
+    "parentTopicId": null,
+    "code": "TOP_T0322",
+    "level": 1
+  },
+  {
+    "id": "T0323",
+    "subjectId": "S006",
+    "name": "General Pharmacology",
+    "parentTopicId": null,
+    "code": "TOP_T0323",
+    "level": 1
+  },
+  {
+    "id": "T0324",
+    "subjectId": "S006",
+    "name": "Pharmacokinetics",
+    "parentTopicId": "T0323",
+    "code": "TOP_T0324",
+    "level": 2
+  },
+  {
+    "id": "T0325",
+    "subjectId": "S006",
+    "name": "Pharmacodynamics",
+    "parentTopicId": "T0323",
+    "code": "TOP_T0325",
+    "level": 2
+  },
+  {
+    "id": "T0326",
+    "subjectId": "S006",
+    "name": "Drug Interactions",
+    "parentTopicId": "T0323",
+    "code": "TOP_T0326",
+    "level": 2
+  },
+  {
+    "id": "T0327",
+    "subjectId": "S006",
+    "name": "Adverse Drug Reactions",
+    "parentTopicId": "T0323",
+    "code": "TOP_T0327",
+    "level": 2
+  },
+  {
+    "id": "T0328",
+    "subjectId": "S006",
+    "name": "Autonomic Nervous System Drugs",
+    "parentTopicId": null,
+    "code": "TOP_T0328",
+    "level": 1
+  },
+  {
+    "id": "T0329",
+    "subjectId": "S006",
+    "name": "Cholinergic Drugs",
+    "parentTopicId": "T0328",
+    "code": "TOP_T0329",
+    "level": 2
+  },
+  {
+    "id": "T0330",
+    "subjectId": "S006",
+    "name": "Adrenergic Drugs",
+    "parentTopicId": "T0328",
+    "code": "TOP_T0330",
+    "level": 2
+  },
+  {
+    "id": "T0331",
+    "subjectId": "S006",
+    "name": "Cardiovascular Drugs",
+    "parentTopicId": null,
+    "code": "TOP_T0331",
+    "level": 1
+  },
+  {
+    "id": "T0332",
+    "subjectId": "S006",
+    "name": "Antihypertensives",
+    "parentTopicId": "T0331",
+    "code": "TOP_T0332",
+    "level": 2
+  },
+  {
+    "id": "T0333",
+    "subjectId": "S006",
+    "name": "Antianginal Drugs",
+    "parentTopicId": "T0331",
+    "code": "TOP_T0333",
+    "level": 2
+  },
+  {
+    "id": "T0334",
+    "subjectId": "S006",
+    "name": "Antiarrhythmics",
+    "parentTopicId": "T0331",
+    "code": "TOP_T0334",
+    "level": 2
+  },
+  {
+    "id": "T0335",
+    "subjectId": "S006",
+    "name": "Diuretics",
+    "parentTopicId": "T0331",
+    "code": "TOP_T0335",
+    "level": 2
+  },
+  {
+    "id": "T0336",
+    "subjectId": "S006",
+    "name": "Respiratory Drugs",
+    "parentTopicId": null,
+    "code": "TOP_T0336",
+    "level": 1
+  },
+  {
+    "id": "T0337",
+    "subjectId": "S006",
+    "name": "Bronchodilators",
+    "parentTopicId": "T0336",
+    "code": "TOP_T0337",
+    "level": 2
+  },
+  {
+    "id": "T0338",
+    "subjectId": "S006",
+    "name": "Antitussives",
+    "parentTopicId": "T0336",
+    "code": "TOP_T0338",
+    "level": 2
+  },
+  {
+    "id": "T0339",
+    "subjectId": "S006",
+    "name": "GI Drugs",
+    "parentTopicId": null,
+    "code": "TOP_T0339",
+    "level": 1
+  },
+  {
+    "id": "T0340",
+    "subjectId": "S006",
+    "name": "Antiulcer Drugs",
+    "parentTopicId": "T0339",
+    "code": "TOP_T0340",
+    "level": 2
+  },
+  {
+    "id": "T0341",
+    "subjectId": "S006",
+    "name": "Antiemetics",
+    "parentTopicId": "T0339",
+    "code": "TOP_T0341",
+    "level": 2
+  },
+  {
+    "id": "T0342",
+    "subjectId": "S006",
+    "name": "Antimicrobial Agents",
+    "parentTopicId": null,
+    "code": "TOP_T0342",
+    "level": 1
+  },
+  {
+    "id": "T0343",
+    "subjectId": "S006",
+    "name": "Antibacterials",
+    "parentTopicId": "T0342",
+    "code": "TOP_T0343",
+    "level": 2
+  },
+  {
+    "id": "T0344",
+    "subjectId": "S006",
+    "name": "Beta-Lactams",
+    "parentTopicId": "T0343",
+    "code": "TOP_T0344",
+    "level": 3
+  },
+  {
+    "id": "T0345",
+    "subjectId": "S006",
+    "name": "Aminoglycosides",
+    "parentTopicId": "T0343",
+    "code": "TOP_T0345",
+    "level": 3
+  },
+  {
+    "id": "T0346",
+    "subjectId": "S006",
+    "name": "Fluoroquinolones",
+    "parentTopicId": "T0343",
+    "code": "TOP_T0346",
+    "level": 3
+  },
+  {
+    "id": "T0347",
+    "subjectId": "S006",
+    "name": "Antivirals",
+    "parentTopicId": "T0342",
+    "code": "TOP_T0347",
+    "level": 2
+  },
+  {
+    "id": "T0348",
+    "subjectId": "S006",
+    "name": "Antifungals",
+    "parentTopicId": "T0342",
+    "code": "TOP_T0348",
+    "level": 2
+  },
+  {
+    "id": "T0349",
+    "subjectId": "S006",
+    "name": "Antiparasitics",
+    "parentTopicId": "T0342",
+    "code": "TOP_T0349",
+    "level": 2
+  },
+  {
+    "id": "T0350",
+    "subjectId": "S006",
+    "name": "CNS Drugs",
+    "parentTopicId": null,
+    "code": "TOP_T0350",
+    "level": 1
+  },
+  {
+    "id": "T0351",
+    "subjectId": "S006",
+    "name": "Sedative-Hypnotics",
+    "parentTopicId": "T0350",
+    "code": "TOP_T0351",
+    "level": 2
+  },
+  {
+    "id": "T0352",
+    "subjectId": "S006",
+    "name": "Antiepileptics",
+    "parentTopicId": "T0350",
+    "code": "TOP_T0352",
+    "level": 2
+  },
+  {
+    "id": "T0353",
+    "subjectId": "S006",
+    "name": "Antipsychotics",
+    "parentTopicId": "T0350",
+    "code": "TOP_T0353",
+    "level": 2
+  },
+  {
+    "id": "T0354",
+    "subjectId": "S006",
+    "name": "Analgesics",
+    "parentTopicId": "T0350",
+    "code": "TOP_T0354",
+    "level": 2
+  },
+  {
+    "id": "T0355",
+    "subjectId": "S006",
+    "name": "General Anesthetics",
+    "parentTopicId": "T0350",
+    "code": "TOP_T0355",
+    "level": 2
+  },
+  {
+    "id": "T0356",
+    "subjectId": "S006",
+    "name": "Endocrine Pharmacology",
+    "parentTopicId": null,
+    "code": "TOP_T0356",
+    "level": 1
+  },
+  {
+    "id": "T0357",
+    "subjectId": "S006",
+    "name": "Insulin & Oral Hypoglycemics",
+    "parentTopicId": "T0356",
+    "code": "TOP_T0357",
+    "level": 2
+  },
+  {
+    "id": "T0358",
+    "subjectId": "S006",
+    "name": "Thyroid Drugs",
+    "parentTopicId": "T0356",
+    "code": "TOP_T0358",
+    "level": 2
+  },
+  {
+    "id": "T0359",
+    "subjectId": "S006",
+    "name": "Corticosteroids",
+    "parentTopicId": "T0356",
+    "code": "TOP_T0359",
+    "level": 2
+  },
+  {
+    "id": "T0360",
+    "subjectId": "S006",
+    "name": "Chemotherapy",
+    "parentTopicId": null,
+    "code": "TOP_T0360",
+    "level": 1
+  },
+  {
+    "id": "T0361",
+    "subjectId": "S006",
+    "name": "Anticancer Drugs",
+    "parentTopicId": "T0360",
+    "code": "TOP_T0361",
+    "level": 2
+  },
+  {
+    "id": "T0362",
+    "subjectId": "S006",
+    "name": "Pharmacovigilance & Rational Drug Use",
+    "parentTopicId": null,
+    "code": "TOP_T0362",
+    "level": 1
+  },
+  {
+    "id": "T0363",
+    "subjectId": "S007",
+    "name": "Medical Jurisprudence",
+    "parentTopicId": null,
+    "code": "TOP_T0363",
+    "level": 1
+  },
+  {
+    "id": "T0364",
+    "subjectId": "S007",
+    "name": "Legal Procedures",
+    "parentTopicId": "T0363",
+    "code": "TOP_T0364",
+    "level": 2
+  },
+  {
+    "id": "T0365",
+    "subjectId": "S007",
+    "name": "Consent & Medical Negligence",
+    "parentTopicId": "T0363",
+    "code": "TOP_T0365",
+    "level": 2
+  },
+  {
+    "id": "T0366",
+    "subjectId": "S007",
+    "name": "Identification",
+    "parentTopicId": null,
+    "code": "TOP_T0366",
+    "level": 1
+  },
+  {
+    "id": "T0367",
+    "subjectId": "S007",
+    "name": "Age Estimation",
+    "parentTopicId": "T0366",
+    "code": "TOP_T0367",
+    "level": 2
+  },
+  {
+    "id": "T0368",
+    "subjectId": "S007",
+    "name": "Sex Determination",
+    "parentTopicId": "T0366",
+    "code": "TOP_T0368",
+    "level": 2
+  },
+  {
+    "id": "T0369",
+    "subjectId": "S007",
+    "name": "Injuries",
+    "parentTopicId": null,
+    "code": "TOP_T0369",
+    "level": 1
+  },
+  {
+    "id": "T0370",
+    "subjectId": "S007",
+    "name": "Mechanical Injuries",
+    "parentTopicId": "T0369",
+    "code": "TOP_T0370",
+    "level": 2
+  },
+  {
+    "id": "T0371",
+    "subjectId": "S007",
+    "name": "Thermal Injuries",
+    "parentTopicId": "T0369",
+    "code": "TOP_T0371",
+    "level": 2
+  },
+  {
+    "id": "T0372",
+    "subjectId": "S007",
+    "name": "Firearm Injuries",
+    "parentTopicId": "T0369",
+    "code": "TOP_T0372",
+    "level": 2
+  },
+  {
+    "id": "T0373",
+    "subjectId": "S007",
+    "name": "Asphyxial Deaths",
+    "parentTopicId": null,
+    "code": "TOP_T0373",
+    "level": 1
+  },
+  {
+    "id": "T0374",
+    "subjectId": "S007",
+    "name": "Hanging",
+    "parentTopicId": "T0373",
+    "code": "TOP_T0374",
+    "level": 2
+  },
+  {
+    "id": "T0375",
+    "subjectId": "S007",
+    "name": "Strangulation",
+    "parentTopicId": "T0373",
+    "code": "TOP_T0375",
+    "level": 2
+  },
+  {
+    "id": "T0376",
+    "subjectId": "S007",
+    "name": "Drowning",
+    "parentTopicId": "T0373",
+    "code": "TOP_T0376",
+    "level": 2
+  },
+  {
+    "id": "T0377",
+    "subjectId": "S007",
+    "name": "Forensic Toxicology",
+    "parentTopicId": null,
+    "code": "TOP_T0377",
+    "level": 1
+  },
+  {
+    "id": "T0378",
+    "subjectId": "S007",
+    "name": "Organophosphate Poisoning",
+    "parentTopicId": "T0377",
+    "code": "TOP_T0378",
+    "level": 2
+  },
+  {
+    "id": "T0379",
+    "subjectId": "S007",
+    "name": "Corrosive Poisoning",
+    "parentTopicId": "T0377",
+    "code": "TOP_T0379",
+    "level": 2
+  },
+  {
+    "id": "T0380",
+    "subjectId": "S007",
+    "name": "Alcohol & Drug Toxicology",
+    "parentTopicId": "T0377",
+    "code": "TOP_T0380",
+    "level": 2
+  },
+  {
+    "id": "T0381",
+    "subjectId": "S007",
+    "name": "Sexual Offences & Medico-Legal Aspects",
+    "parentTopicId": null,
+    "code": "TOP_T0381",
+    "level": 1
+  },
+  {
+    "id": "T0382",
+    "subjectId": "S007",
+    "name": "Autopsy Procedures",
+    "parentTopicId": null,
+    "code": "TOP_T0382",
+    "level": 1
+  },
+  {
+    "id": "T0383",
+    "subjectId": "S008",
+    "name": "Concepts of Health & Disease",
+    "parentTopicId": null,
+    "code": "TOP_T0383",
+    "level": 1
+  },
+  {
+    "id": "T0384",
+    "subjectId": "S008",
+    "name": "Epidemiology",
+    "parentTopicId": null,
+    "code": "TOP_T0384",
+    "level": 1
+  },
+  {
+    "id": "T0385",
+    "subjectId": "S008",
+    "name": "Study Designs",
+    "parentTopicId": "T0384",
+    "code": "TOP_T0385",
+    "level": 2
+  },
+  {
+    "id": "T0386",
+    "subjectId": "S008",
+    "name": "Disease Surveillance",
+    "parentTopicId": "T0384",
+    "code": "TOP_T0386",
+    "level": 2
+  },
+  {
+    "id": "T0387",
+    "subjectId": "S008",
+    "name": "Biostatistics",
+    "parentTopicId": null,
+    "code": "TOP_T0387",
+    "level": 1
+  },
+  {
+    "id": "T0388",
+    "subjectId": "S008",
+    "name": "Data Presentation",
+    "parentTopicId": "T0387",
+    "code": "TOP_T0388",
+    "level": 2
+  },
+  {
+    "id": "T0389",
+    "subjectId": "S008",
+    "name": "Tests of Significance",
+    "parentTopicId": "T0387",
+    "code": "TOP_T0389",
+    "level": 2
+  },
+  {
+    "id": "T0390",
+    "subjectId": "S008",
+    "name": "Demography & Vital Statistics",
+    "parentTopicId": null,
+    "code": "TOP_T0390",
+    "level": 1
+  },
+  {
+    "id": "T0391",
+    "subjectId": "S008",
+    "name": "Communicable Diseases",
+    "parentTopicId": null,
+    "code": "TOP_T0391",
+    "level": 1
+  },
+  {
+    "id": "T0392",
+    "subjectId": "S008",
+    "name": "Vaccine Preventable Diseases",
+    "parentTopicId": "T0391",
+    "code": "TOP_T0392",
+    "level": 2
+  },
+  {
+    "id": "T0393",
+    "subjectId": "S008",
+    "name": "Vector Borne Diseases",
+    "parentTopicId": "T0391",
+    "code": "TOP_T0393",
+    "level": 2
+  },
+  {
+    "id": "T0394",
+    "subjectId": "S008",
+    "name": "Zoonotic Diseases",
+    "parentTopicId": "T0391",
+    "code": "TOP_T0394",
+    "level": 2
+  },
+  {
+    "id": "T0395",
+    "subjectId": "S008",
+    "name": "Non-Communicable Diseases",
+    "parentTopicId": null,
+    "code": "TOP_T0395",
+    "level": 1
+  },
+  {
+    "id": "T0396",
+    "subjectId": "S008",
+    "name": "Diabetes Control Program",
+    "parentTopicId": "T0395",
+    "code": "TOP_T0396",
+    "level": 2
+  },
+  {
+    "id": "T0397",
+    "subjectId": "S008",
+    "name": "Cancer Control Program",
+    "parentTopicId": "T0395",
+    "code": "TOP_T0397",
+    "level": 2
+  },
+  {
+    "id": "T0398",
+    "subjectId": "S008",
+    "name": "Nutrition & Nutritional Disorders",
+    "parentTopicId": null,
+    "code": "TOP_T0398",
+    "level": 1
+  },
+  {
+    "id": "T0399",
+    "subjectId": "S008",
+    "name": "Maternal & Child Health Programs",
+    "parentTopicId": null,
+    "code": "TOP_T0399",
+    "level": 1
+  },
+  {
+    "id": "T0400",
+    "subjectId": "S008",
+    "name": "National Health Programs",
+    "parentTopicId": null,
+    "code": "TOP_T0400",
+    "level": 1
+  },
+  {
+    "id": "T0401",
+    "subjectId": "S008",
+    "name": "Environmental & Occupational Health",
+    "parentTopicId": null,
+    "code": "TOP_T0401",
+    "level": 1
+  },
+  {
+    "id": "T0402",
+    "subjectId": "S008",
+    "name": "Health Care Delivery System in India",
+    "parentTopicId": null,
+    "code": "TOP_T0402",
+    "level": 1
+  },
+  {
+    "id": "T0403",
+    "subjectId": "S008",
+    "name": "Health Education & IEC",
+    "parentTopicId": null,
+    "code": "TOP_T0403",
+    "level": 1
+  },
+  {
+    "id": "T0404",
+    "subjectId": "S009",
+    "name": "Anatomy & Physiology of Eye",
+    "parentTopicId": null,
+    "code": "TOP_T0404",
+    "level": 1
+  },
+  {
+    "id": "T0405",
+    "subjectId": "S009",
+    "name": "Refractive Errors",
+    "parentTopicId": null,
+    "code": "TOP_T0405",
+    "level": 1
+  },
+  {
+    "id": "T0406",
+    "subjectId": "S009",
+    "name": "Myopia",
+    "parentTopicId": "T0405",
+    "code": "TOP_T0406",
+    "level": 2
+  },
+  {
+    "id": "T0407",
+    "subjectId": "S009",
+    "name": "Hypermetropia",
+    "parentTopicId": "T0405",
+    "code": "TOP_T0407",
+    "level": 2
+  },
+  {
+    "id": "T0408",
+    "subjectId": "S009",
+    "name": "Astigmatism",
+    "parentTopicId": "T0405",
+    "code": "TOP_T0408",
+    "level": 2
+  },
+  {
+    "id": "T0409",
+    "subjectId": "S009",
+    "name": "Diseases of Conjunctiva, Cornea & Sclera",
+    "parentTopicId": null,
+    "code": "TOP_T0409",
+    "level": 1
+  },
+  {
+    "id": "T0410",
+    "subjectId": "S009",
+    "name": "Cataract & Glaucoma",
+    "parentTopicId": null,
+    "code": "TOP_T0410",
+    "level": 1
+  },
+  {
+    "id": "T0411",
+    "subjectId": "S009",
+    "name": "Diseases of Retina & Uvea",
+    "parentTopicId": null,
+    "code": "TOP_T0411",
+    "level": 1
+  },
+  {
+    "id": "T0412",
+    "subjectId": "S009",
+    "name": "Ocular Trauma & Emergencies",
+    "parentTopicId": null,
+    "code": "TOP_T0412",
+    "level": 1
+  },
+  {
+    "id": "T0413",
+    "subjectId": "S009",
+    "name": "Community Ophthalmology",
+    "parentTopicId": null,
+    "code": "TOP_T0413",
+    "level": 1
+  },
+  {
+    "id": "T0414",
+    "subjectId": "S010",
+    "name": "Diseases of Ear",
+    "parentTopicId": null,
+    "code": "TOP_T0414",
+    "level": 1
+  },
+  {
+    "id": "T0415",
+    "subjectId": "S010",
+    "name": "Otitis Media",
+    "parentTopicId": "T0414",
+    "code": "TOP_T0415",
+    "level": 2
+  },
+  {
+    "id": "T0416",
+    "subjectId": "S010",
+    "name": "Hearing Loss",
+    "parentTopicId": "T0414",
+    "code": "TOP_T0416",
+    "level": 2
+  },
+  {
+    "id": "T0417",
+    "subjectId": "S010",
+    "name": "Diseases of Nose & Sinuses",
+    "parentTopicId": null,
+    "code": "TOP_T0417",
+    "level": 1
+  },
+  {
+    "id": "T0418",
+    "subjectId": "S010",
+    "name": "Diseases of Throat",
+    "parentTopicId": null,
+    "code": "TOP_T0418",
+    "level": 1
+  },
+  {
+    "id": "T0419",
+    "subjectId": "S010",
+    "name": "Tonsillitis",
+    "parentTopicId": "T0418",
+    "code": "TOP_T0419",
+    "level": 2
+  },
+  {
+    "id": "T0420",
+    "subjectId": "S010",
+    "name": "Pharyngitis",
+    "parentTopicId": "T0418",
+    "code": "TOP_T0420",
+    "level": 2
+  },
+  {
+    "id": "T0421",
+    "subjectId": "S010",
+    "name": "Head & Neck Tumors",
+    "parentTopicId": null,
+    "code": "TOP_T0421",
+    "level": 1
+  },
+  {
+    "id": "T0422",
+    "subjectId": "S010",
+    "name": "ENT Emergencies",
+    "parentTopicId": null,
+    "code": "TOP_T0422",
+    "level": 1
+  },
+  {
+    "id": "T0423",
+    "subjectId": "S010",
+    "name": "Foreign Bodies",
+    "parentTopicId": "T0422",
+    "code": "TOP_T0423",
+    "level": 2
+  },
+  {
+    "id": "T0424",
+    "subjectId": "S010",
+    "name": "Epistaxis",
+    "parentTopicId": "T0422",
+    "code": "TOP_T0424",
+    "level": 2
+  },
+  {
+    "id": "T0425",
+    "subjectId": "S011",
+    "name": "Cardiovascular Diseases",
+    "parentTopicId": null,
+    "code": "TOP_T0425",
+    "level": 1
+  },
+  {
+    "id": "T0426",
+    "subjectId": "S011",
+    "name": "Ischemic Heart Disease",
+    "parentTopicId": "T0425",
+    "code": "TOP_T0426",
+    "level": 2
+  },
+  {
+    "id": "T0427",
+    "subjectId": "S011",
+    "name": "Heart Failure",
+    "parentTopicId": "T0425",
+    "code": "TOP_T0427",
+    "level": 2
+  },
+  {
+    "id": "T0428",
+    "subjectId": "S011",
+    "name": "Valvular Heart Disease",
+    "parentTopicId": "T0425",
+    "code": "TOP_T0428",
+    "level": 2
+  },
+  {
+    "id": "T0429",
+    "subjectId": "S011",
+    "name": "Respiratory Diseases",
+    "parentTopicId": null,
+    "code": "TOP_T0429",
+    "level": 1
+  },
+  {
+    "id": "T0430",
+    "subjectId": "S011",
+    "name": "Asthma",
+    "parentTopicId": "T0429",
+    "code": "TOP_T0430",
+    "level": 2
+  },
+  {
+    "id": "T0431",
+    "subjectId": "S011",
+    "name": "COPD",
+    "parentTopicId": "T0429",
+    "code": "TOP_T0431",
+    "level": 2
+  },
+  {
+    "id": "T0432",
+    "subjectId": "S011",
+    "name": "Pneumonia",
+    "parentTopicId": "T0429",
+    "code": "TOP_T0432",
+    "level": 2
+  },
+  {
+    "id": "T0433",
+    "subjectId": "S011",
+    "name": "Tuberculosis",
+    "parentTopicId": "T0429",
+    "code": "TOP_T0433",
+    "level": 2
+  },
+  {
+    "id": "T0434",
+    "subjectId": "S011",
+    "name": "Gastrointestinal & Hepatobiliary Diseases",
+    "parentTopicId": null,
+    "code": "TOP_T0434",
+    "level": 1
+  },
+  {
+    "id": "T0435",
+    "subjectId": "S011",
+    "name": "Nephrology",
+    "parentTopicId": null,
+    "code": "TOP_T0435",
+    "level": 1
+  },
+  {
+    "id": "T0436",
+    "subjectId": "S011",
+    "name": "Chronic Kidney Disease",
+    "parentTopicId": "T0435",
+    "code": "TOP_T0436",
+    "level": 2
+  },
+  {
+    "id": "T0437",
+    "subjectId": "S011",
+    "name": "Acute Kidney Injury",
+    "parentTopicId": "T0435",
+    "code": "TOP_T0437",
+    "level": 2
+  },
+  {
+    "id": "T0438",
+    "subjectId": "S011",
+    "name": "Glomerulonephritis",
+    "parentTopicId": "T0435",
+    "code": "TOP_T0438",
+    "level": 2
+  },
+  {
+    "id": "T0439",
+    "subjectId": "S011",
+    "name": "Endocrinology",
+    "parentTopicId": null,
+    "code": "TOP_T0439",
+    "level": 1
+  },
+  {
+    "id": "T0440",
+    "subjectId": "S011",
+    "name": "Diabetes Mellitus",
+    "parentTopicId": "T0439",
+    "code": "TOP_T0440",
+    "level": 2
+  },
+  {
+    "id": "T0441",
+    "subjectId": "S011",
+    "name": "Thyroid Disorders",
+    "parentTopicId": "T0439",
+    "code": "TOP_T0441",
+    "level": 2
+  },
+  {
+    "id": "T0442",
+    "subjectId": "S011",
+    "name": "Neurology",
+    "parentTopicId": null,
+    "code": "TOP_T0442",
+    "level": 1
+  },
+  {
+    "id": "T0443",
+    "subjectId": "S011",
+    "name": "Stroke",
+    "parentTopicId": "T0442",
+    "code": "TOP_T0443",
+    "level": 2
+  },
+  {
+    "id": "T0444",
+    "subjectId": "S011",
+    "name": "Epilepsy",
+    "parentTopicId": "T0442",
+    "code": "TOP_T0444",
+    "level": 2
+  },
+  {
+    "id": "T0445",
+    "subjectId": "S011",
+    "name": "Peripheral Neuropathies",
+    "parentTopicId": "T0442",
+    "code": "TOP_T0445",
+    "level": 2
+  },
+  {
+    "id": "T0446",
+    "subjectId": "S011",
+    "name": "Infectious Diseases",
+    "parentTopicId": null,
+    "code": "TOP_T0446",
+    "level": 1
+  },
+  {
+    "id": "T0447",
+    "subjectId": "S011",
+    "name": "Sepsis",
+    "parentTopicId": "T0446",
+    "code": "TOP_T0447",
+    "level": 2
+  },
+  {
+    "id": "T0448",
+    "subjectId": "S011",
+    "name": "HIV/AIDS",
+    "parentTopicId": "T0446",
+    "code": "TOP_T0448",
+    "level": 2
+  },
+  {
+    "id": "T0449",
+    "subjectId": "S011",
+    "name": "Dengue",
+    "parentTopicId": "T0446",
+    "code": "TOP_T0449",
+    "level": 2
+  },
+  {
+    "id": "T0450",
+    "subjectId": "S011",
+    "name": "Malaria",
+    "parentTopicId": "T0446",
+    "code": "TOP_T0450",
+    "level": 2
+  },
+  {
+    "id": "T0451",
+    "subjectId": "S011",
+    "name": "Rheumatology",
+    "parentTopicId": null,
+    "code": "TOP_T0451",
+    "level": 1
+  },
+  {
+    "id": "T0452",
+    "subjectId": "S011",
+    "name": "Hematology",
+    "parentTopicId": null,
+    "code": "TOP_T0452",
+    "level": 1
+  },
+  {
+    "id": "T0453",
+    "subjectId": "S011",
+    "name": "Anemia",
+    "parentTopicId": "T0452",
+    "code": "TOP_T0453",
+    "level": 2
+  },
+  {
+    "id": "T0454",
+    "subjectId": "S011",
+    "name": "Leukemia",
+    "parentTopicId": "T0452",
+    "code": "TOP_T0454",
+    "level": 2
+  },
+  {
+    "id": "T0455",
+    "subjectId": "S011",
+    "name": "Bleeding Disorders",
+    "parentTopicId": "T0452",
+    "code": "TOP_T0455",
+    "level": 2
+  },
+  {
+    "id": "T0456",
+    "subjectId": "S011",
+    "name": "Critical Care & Emergency Medicine",
+    "parentTopicId": null,
+    "code": "TOP_T0456",
+    "level": 1
+  },
+  {
+    "id": "T0457",
+    "subjectId": "S011",
+    "name": "Dermatology (Systemic)",
+    "parentTopicId": null,
+    "code": "TOP_T0457",
+    "level": 1
+  },
+  {
+    "id": "T0458",
+    "subjectId": "S011",
+    "name": "Psychiatry (Systemic)",
+    "parentTopicId": null,
+    "code": "TOP_T0458",
+    "level": 1
+  },
+  {
+    "id": "T0459",
+    "subjectId": "S012",
+    "name": "Perioperative Care",
+    "parentTopicId": null,
+    "code": "TOP_T0459",
+    "level": 1
+  },
+  {
+    "id": "T0460",
+    "subjectId": "S012",
+    "name": "Pre-Operative Care",
+    "parentTopicId": "T0459",
+    "code": "TOP_T0460",
+    "level": 2
+  },
+  {
+    "id": "T0461",
+    "subjectId": "S012",
+    "name": "Post-Operative Care",
+    "parentTopicId": "T0459",
+    "code": "TOP_T0461",
+    "level": 2
+  },
+  {
+    "id": "T0462",
+    "subjectId": "S012",
+    "name": "Wounds, Ulcers & Sinuses",
+    "parentTopicId": null,
+    "code": "TOP_T0462",
+    "level": 1
+  },
+  {
+    "id": "T0463",
+    "subjectId": "S012",
+    "name": "Gastrointestinal Surgery",
+    "parentTopicId": null,
+    "code": "TOP_T0463",
+    "level": 1
+  },
+  {
+    "id": "T0464",
+    "subjectId": "S012",
+    "name": "Stomach Surgery",
+    "parentTopicId": "T0463",
+    "code": "TOP_T0464",
+    "level": 2
+  },
+  {
+    "id": "T0465",
+    "subjectId": "S012",
+    "name": "Intestinal Surgery",
+    "parentTopicId": "T0463",
+    "code": "TOP_T0465",
+    "level": 2
+  },
+  {
+    "id": "T0466",
+    "subjectId": "S012",
+    "name": "Colorectal Surgery",
+    "parentTopicId": "T0463",
+    "code": "TOP_T0466",
+    "level": 2
+  },
+  {
+    "id": "T0467",
+    "subjectId": "S012",
+    "name": "Hepatobiliary & Pancreatic Surgery",
+    "parentTopicId": null,
+    "code": "TOP_T0467",
+    "level": 1
+  },
+  {
+    "id": "T0468",
+    "subjectId": "S012",
+    "name": "Breast Surgery",
+    "parentTopicId": null,
+    "code": "TOP_T0468",
+    "level": 1
+  },
+  {
+    "id": "T0469",
+    "subjectId": "S012",
+    "name": "Endocrine Surgery",
+    "parentTopicId": null,
+    "code": "TOP_T0469",
+    "level": 1
+  },
+  {
+    "id": "T0470",
+    "subjectId": "S012",
+    "name": "Thyroid Surgery",
+    "parentTopicId": "T0469",
+    "code": "TOP_T0470",
+    "level": 2
+  },
+  {
+    "id": "T0471",
+    "subjectId": "S012",
+    "name": "Urology",
+    "parentTopicId": null,
+    "code": "TOP_T0471",
+    "level": 1
+  },
+  {
+    "id": "T0472",
+    "subjectId": "S012",
+    "name": "Renal Stones",
+    "parentTopicId": "T0471",
+    "code": "TOP_T0472",
+    "level": 2
+  },
+  {
+    "id": "T0473",
+    "subjectId": "S012",
+    "name": "Prostate Disorders",
+    "parentTopicId": "T0471",
+    "code": "TOP_T0473",
+    "level": 2
+  },
+  {
+    "id": "T0474",
+    "subjectId": "S012",
+    "name": "Bladder Disorders",
+    "parentTopicId": "T0471",
+    "code": "TOP_T0474",
+    "level": 2
+  },
+  {
+    "id": "T0475",
+    "subjectId": "S012",
+    "name": "Vascular Surgery",
+    "parentTopicId": null,
+    "code": "TOP_T0475",
+    "level": 1
+  },
+  {
+    "id": "T0476",
+    "subjectId": "S012",
+    "name": "Aneurysms",
+    "parentTopicId": "T0475",
+    "code": "TOP_T0476",
+    "level": 2
+  },
+  {
+    "id": "T0477",
+    "subjectId": "S012",
+    "name": "Peripheral Vascular Disease",
+    "parentTopicId": "T0475",
+    "code": "TOP_T0477",
+    "level": 2
+  },
+  {
+    "id": "T0478",
+    "subjectId": "S012",
+    "name": "Trauma & Emergency Surgery",
+    "parentTopicId": null,
+    "code": "TOP_T0478",
+    "level": 1
+  },
+  {
+    "id": "T0479",
+    "subjectId": "S012",
+    "name": "Oncosurgery Basics",
+    "parentTopicId": null,
+    "code": "TOP_T0479",
+    "level": 1
+  },
+  {
+    "id": "T0480",
+    "subjectId": "S013",
+    "name": "Normal Pregnancy",
+    "parentTopicId": null,
+    "code": "TOP_T0480",
+    "level": 1
+  },
+  {
+    "id": "T0481",
+    "subjectId": "S013",
+    "name": "Antenatal Care",
+    "parentTopicId": "T0480",
+    "code": "TOP_T0481",
+    "level": 2
+  },
+  {
+    "id": "T0482",
+    "subjectId": "S013",
+    "name": "Labour",
+    "parentTopicId": null,
+    "code": "TOP_T0482",
+    "level": 1
+  },
+  {
+    "id": "T0483",
+    "subjectId": "S013",
+    "name": "Normal Labour",
+    "parentTopicId": "T0482",
+    "code": "TOP_T0483",
+    "level": 2
+  },
+  {
+    "id": "T0484",
+    "subjectId": "S013",
+    "name": "Abnormal Labour",
+    "parentTopicId": "T0482",
+    "code": "TOP_T0484",
+    "level": 2
+  },
+  {
+    "id": "T0485",
+    "subjectId": "S013",
+    "name": "High Risk Pregnancy",
+    "parentTopicId": null,
+    "code": "TOP_T0485",
+    "level": 1
+  },
+  {
+    "id": "T0486",
+    "subjectId": "S013",
+    "name": "Pre-eclampsia",
+    "parentTopicId": "T0485",
+    "code": "TOP_T0486",
+    "level": 2
+  },
+  {
+    "id": "T0487",
+    "subjectId": "S013",
+    "name": "Gestational Diabetes",
+    "parentTopicId": "T0485",
+    "code": "TOP_T0487",
+    "level": 2
+  },
+  {
+    "id": "T0488",
+    "subjectId": "S013",
+    "name": "Postpartum Care & Complications",
+    "parentTopicId": null,
+    "code": "TOP_T0488",
+    "level": 1
+  },
+  {
+    "id": "T0489",
+    "subjectId": "S013",
+    "name": "Menstrual Disorders",
+    "parentTopicId": null,
+    "code": "TOP_T0489",
+    "level": 1
+  },
+  {
+    "id": "T0490",
+    "subjectId": "S013",
+    "name": "PCOS",
+    "parentTopicId": "T0489",
+    "code": "TOP_T0490",
+    "level": 2
+  },
+  {
+    "id": "T0491",
+    "subjectId": "S013",
+    "name": "Infertility",
+    "parentTopicId": null,
+    "code": "TOP_T0491",
+    "level": 1
+  },
+  {
+    "id": "T0492",
+    "subjectId": "S013",
+    "name": "Gynecological Tumors",
+    "parentTopicId": null,
+    "code": "TOP_T0492",
+    "level": 1
+  },
+  {
+    "id": "T0493",
+    "subjectId": "S013",
+    "name": "Benign Tumors",
+    "parentTopicId": "T0492",
+    "code": "TOP_T0493",
+    "level": 2
+  },
+  {
+    "id": "T0494",
+    "subjectId": "S013",
+    "name": "Malignant Tumors",
+    "parentTopicId": "T0492",
+    "code": "TOP_T0494",
+    "level": 2
+  },
+  {
+    "id": "T0495",
+    "subjectId": "S013",
+    "name": "Cervical Cancer",
+    "parentTopicId": "T0494",
+    "code": "TOP_T0495",
+    "level": 3
+  },
+  {
+    "id": "T0496",
+    "subjectId": "S013",
+    "name": "Ovarian Cancer",
+    "parentTopicId": "T0494",
+    "code": "TOP_T0496",
+    "level": 3
+  },
+  {
+    "id": "T0497",
+    "subjectId": "S013",
+    "name": "Contraception & Family Planning",
+    "parentTopicId": null,
+    "code": "TOP_T0497",
+    "level": 1
+  },
+  {
+    "id": "T0498",
+    "subjectId": "S013",
+    "name": "Genital Tract Infections",
+    "parentTopicId": null,
+    "code": "TOP_T0498",
+    "level": 1
+  },
+  {
+    "id": "T0499",
+    "subjectId": "S014",
+    "name": "Normal Growth & Development",
+    "parentTopicId": null,
+    "code": "TOP_T0499",
+    "level": 1
+  },
+  {
+    "id": "T0500",
+    "subjectId": "S014",
+    "name": "Neonatology",
+    "parentTopicId": null,
+    "code": "TOP_T0500",
+    "level": 1
+  },
+  {
+    "id": "T0501",
+    "subjectId": "S014",
+    "name": "Newborn Care",
+    "parentTopicId": "T0500",
+    "code": "TOP_T0501",
+    "level": 2
+  },
+  {
+    "id": "T0502",
+    "subjectId": "S014",
+    "name": "Neonatal Jaundice",
+    "parentTopicId": "T0500",
+    "code": "TOP_T0502",
+    "level": 2
+  },
+  {
+    "id": "T0503",
+    "subjectId": "S014",
+    "name": "Birth Asphyxia",
+    "parentTopicId": "T0500",
+    "code": "TOP_T0503",
+    "level": 2
+  },
+  {
+    "id": "T0504",
+    "subjectId": "S014",
+    "name": "Nutrition & Malnutrition",
+    "parentTopicId": null,
+    "code": "TOP_T0504",
+    "level": 1
+  },
+  {
+    "id": "T0505",
+    "subjectId": "S014",
+    "name": "Immunization Schedule",
+    "parentTopicId": null,
+    "code": "TOP_T0505",
+    "level": 1
+  },
+  {
+    "id": "T0506",
+    "subjectId": "S014",
+    "name": "Common Pediatric Infections",
+    "parentTopicId": null,
+    "code": "TOP_T0506",
+    "level": 1
+  },
+  {
+    "id": "T0507",
+    "subjectId": "S014",
+    "name": "Congenital Heart Diseases",
+    "parentTopicId": null,
+    "code": "TOP_T0507",
+    "level": 1
+  },
+  {
+    "id": "T0508",
+    "subjectId": "S014",
+    "name": "Pediatric Respiratory & GI Disorders",
+    "parentTopicId": null,
+    "code": "TOP_T0508",
+    "level": 1
+  },
+  {
+    "id": "T0509",
+    "subjectId": "S014",
+    "name": "Genetic & Metabolic Disorders in Children",
+    "parentTopicId": null,
+    "code": "TOP_T0509",
+    "level": 1
+  },
+  {
+    "id": "T0510",
+    "subjectId": "S015",
+    "name": "Fractures",
+    "parentTopicId": null,
+    "code": "TOP_T0510",
+    "level": 1
+  },
+  {
+    "id": "T0511",
+    "subjectId": "S015",
+    "name": "Principles of Fracture Management",
+    "parentTopicId": "T0510",
+    "code": "TOP_T0511",
+    "level": 2
+  },
+  {
+    "id": "T0512",
+    "subjectId": "S015",
+    "name": "Common Fracture Types",
+    "parentTopicId": "T0510",
+    "code": "TOP_T0512",
+    "level": 2
+  },
+  {
+    "id": "T0513",
+    "subjectId": "S015",
+    "name": "Dislocations & Sprains",
+    "parentTopicId": null,
+    "code": "TOP_T0513",
+    "level": 1
+  },
+  {
+    "id": "T0514",
+    "subjectId": "S015",
+    "name": "Bone & Joint Infections",
+    "parentTopicId": null,
+    "code": "TOP_T0514",
+    "level": 1
+  },
+  {
+    "id": "T0515",
+    "subjectId": "S015",
+    "name": "Osteomyelitis",
+    "parentTopicId": "T0514",
+    "code": "TOP_T0515",
+    "level": 2
+  },
+  {
+    "id": "T0516",
+    "subjectId": "S015",
+    "name": "Septic Arthritis",
+    "parentTopicId": "T0514",
+    "code": "TOP_T0516",
+    "level": 2
+  },
+  {
+    "id": "T0517",
+    "subjectId": "S015",
+    "name": "Musculoskeletal Tumors",
+    "parentTopicId": null,
+    "code": "TOP_T0517",
+    "level": 1
+  },
+  {
+    "id": "T0518",
+    "subjectId": "S015",
+    "name": "Spine Disorders",
+    "parentTopicId": null,
+    "code": "TOP_T0518",
+    "level": 1
+  },
+  {
+    "id": "T0519",
+    "subjectId": "S015",
+    "name": "Pediatric Orthopaedics",
+    "parentTopicId": null,
+    "code": "TOP_T0519",
+    "level": 1
+  },
+  {
+    "id": "T0520",
+    "subjectId": "S015",
+    "name": "Rehabilitation & Prosthetics",
+    "parentTopicId": null,
+    "code": "TOP_T0520",
+    "level": 1
+  },
+  {
+    "id": "T0521",
+    "subjectId": "S016",
+    "name": "General Anaesthesia",
+    "parentTopicId": null,
+    "code": "TOP_T0521",
+    "level": 1
+  },
+  {
+    "id": "T0522",
+    "subjectId": "S016",
+    "name": "Induction Agents",
+    "parentTopicId": "T0521",
+    "code": "TOP_T0522",
+    "level": 2
+  },
+  {
+    "id": "T0523",
+    "subjectId": "S016",
+    "name": "Inhalational Agents",
+    "parentTopicId": "T0521",
+    "code": "TOP_T0523",
+    "level": 2
+  },
+  {
+    "id": "T0524",
+    "subjectId": "S016",
+    "name": "Regional & Spinal Anaesthesia",
+    "parentTopicId": null,
+    "code": "TOP_T0524",
+    "level": 1
+  },
+  {
+    "id": "T0525",
+    "subjectId": "S016",
+    "name": "Pain Management",
+    "parentTopicId": null,
+    "code": "TOP_T0525",
+    "level": 1
+  },
+  {
+    "id": "T0526",
+    "subjectId": "S016",
+    "name": "Critical Care & Resuscitation",
+    "parentTopicId": null,
+    "code": "TOP_T0526",
+    "level": 1
+  },
+  {
+    "id": "T0527",
+    "subjectId": "S016",
+    "name": "BLS",
+    "parentTopicId": "T0526",
+    "code": "TOP_T0527",
+    "level": 2
+  },
+  {
+    "id": "T0528",
+    "subjectId": "S016",
+    "name": "ACLS",
+    "parentTopicId": "T0526",
+    "code": "TOP_T0528",
+    "level": 2
+  },
+  {
+    "id": "T0529",
+    "subjectId": "S017",
+    "name": "X-Ray Interpretation",
+    "parentTopicId": null,
+    "code": "TOP_T0529",
+    "level": 1
+  },
+  {
+    "id": "T0530",
+    "subjectId": "S017",
+    "name": "Chest X-Ray",
+    "parentTopicId": "T0529",
+    "code": "TOP_T0530",
+    "level": 2
+  },
+  {
+    "id": "T0531",
+    "subjectId": "S017",
+    "name": "Abdomen X-Ray",
+    "parentTopicId": "T0529",
+    "code": "TOP_T0531",
+    "level": 2
+  },
+  {
+    "id": "T0532",
+    "subjectId": "S017",
+    "name": "Ultrasound Basics",
+    "parentTopicId": null,
+    "code": "TOP_T0532",
+    "level": 1
+  },
+  {
+    "id": "T0533",
+    "subjectId": "S017",
+    "name": "CT & MRI Applications",
+    "parentTopicId": null,
+    "code": "TOP_T0533",
+    "level": 1
+  },
+  {
+    "id": "T0534",
+    "subjectId": "S018",
+    "name": "Skin Infections & Infestations",
+    "parentTopicId": null,
+    "code": "TOP_T0534",
+    "level": 1
+  },
+  {
+    "id": "T0535",
+    "subjectId": "S018",
+    "name": "Eczema & Psoriasis",
+    "parentTopicId": null,
+    "code": "TOP_T0535",
+    "level": 1
+  },
+  {
+    "id": "T0536",
+    "subjectId": "S018",
+    "name": "Sexually Transmitted Infections",
+    "parentTopicId": null,
+    "code": "TOP_T0536",
+    "level": 1
+  },
+  {
+    "id": "T0537",
+    "subjectId": "S018",
+    "name": "Leprosy",
+    "parentTopicId": null,
+    "code": "TOP_T0537",
+    "level": 1
+  },
+  {
+    "id": "T0538",
+    "subjectId": "S018",
+    "name": "Diagnosis",
+    "parentTopicId": "T0537",
+    "code": "TOP_T0538",
+    "level": 2
+  },
+  {
+    "id": "T0539",
+    "subjectId": "S018",
+    "name": "Management",
+    "parentTopicId": "T0537",
+    "code": "TOP_T0539",
+    "level": 2
+  },
+  {
+    "id": "T0540",
+    "subjectId": "S019",
+    "name": "Mood Disorders",
+    "parentTopicId": null,
+    "code": "TOP_T0540",
+    "level": 1
+  },
+  {
+    "id": "T0541",
+    "subjectId": "S019",
+    "name": "Depression",
+    "parentTopicId": "T0540",
+    "code": "TOP_T0541",
+    "level": 2
+  },
+  {
+    "id": "T0542",
+    "subjectId": "S019",
+    "name": "Bipolar Disorder",
+    "parentTopicId": "T0540",
+    "code": "TOP_T0542",
+    "level": 2
+  },
+  {
+    "id": "T0543",
+    "subjectId": "S019",
+    "name": "Anxiety & Somatoform Disorders",
+    "parentTopicId": null,
+    "code": "TOP_T0543",
+    "level": 1
+  },
+  {
+    "id": "T0544",
+    "subjectId": "S019",
+    "name": "Psychotic Disorders",
+    "parentTopicId": null,
+    "code": "TOP_T0544",
+    "level": 1
+  },
+  {
+    "id": "T0545",
+    "subjectId": "S019",
+    "name": "Schizophrenia",
+    "parentTopicId": "T0544",
+    "code": "TOP_T0545",
+    "level": 2
+  },
+  {
+    "id": "T0546",
+    "subjectId": "S019",
+    "name": "Substance Use Disorders",
+    "parentTopicId": null,
+    "code": "TOP_T0546",
+    "level": 1
+  },
+  {
+    "id": "T0547",
+    "subjectId": "S019",
+    "name": "Child & Adolescent Psychiatry",
+    "parentTopicId": null,
+    "code": "TOP_T0547",
+    "level": 1
+  }
+]
