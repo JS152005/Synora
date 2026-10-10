@@ -1,3 +1,6 @@
+![Project Status](https://img.shields.io/badge/Status-Active%20Development-orange)
+![Frontend](https://img.shields.io/badge/Frontend-Under%20Development-yellow)
+![Backend](https://img.shields.io/badge/Backend-In%20Development-yellow)
 # Synora
 
 ### The Smart Medical Student Collaboration Platform
