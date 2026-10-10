@@ -1,27 +1,20 @@
 interface SpinnerProps {
-  size?: "sm" | "md" | "lg";
+  size?: "xs" | "sm" | "md" | "lg";
+  className?: string;
   fullScreen?: boolean;
 }
 
-function Spinner({
-  size = "md",
-  fullScreen = false,
-}: SpinnerProps) {
+function Spinner({ size = "md", className = "", fullScreen = false }: SpinnerProps) {
   const sizes = {
+    xs: "h-3 w-3 border",
     sm: "h-4 w-4 border-2",
-    md: "h-8 w-8 border-[3px]",
-    lg: "h-12 w-12 border-4",
+    md: "h-6 w-6 border-[2.5px]",
+    lg: "h-10 w-10 border-[3px]",
   };
 
   const spinner = (
     <div
-      className={`
-        animate-spin
-        rounded-full
-        border-blue-600
-        border-t-transparent
-        ${sizes[size]}
-      `}
+      className={`animate-spin rounded-full border-indigo-600 border-t-transparent ${sizes[size]} ${className}`}
       role="status"
       aria-label="Loading"
     />

@@ -90,7 +90,7 @@ export const removeUserTopic = async (
 
     await deleteUserTopic(
       userId,
-      topicId,
+      topicId as string,
       type as UserTopicType
     );
 

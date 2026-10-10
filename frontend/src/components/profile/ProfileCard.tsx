@@ -1,10 +1,11 @@
 import type { Profile } from "../../features/profile/profileTypes";
+import Avatar from "../ui/Avatar";
+import Button from "../ui/Button";
+import { Camera, Edit3, School, GraduationCap, Calendar } from "lucide-react";
 
 interface ProfileCardProps {
   profile: Profile;
-
   onEdit: () => void;
-
   onChangePhoto: () => void;
 }
 
@@ -14,102 +15,109 @@ function ProfileCard({
   onChangePhoto,
 }: ProfileCardProps) {
   return (
-    <div className="rounded-xl bg-white p-8 shadow-md">
+    <div className="rounded-2xl border border-slate-200/80 bg-white p-6 md:p-8 shadow-xs">
       <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
         {/* Profile Image */}
-        <div className="flex flex-col items-center">
-          {profile.profileImage ? (
-            <img
+        <div className="flex flex-col items-center shrink-0">
+          <div className="relative">
+            <Avatar
               src={profile.profileImage}
-              alt={profile.fullName}
-              className="h-36 w-36 rounded-full border-4 border-blue-500 object-cover"
+              name={profile.fullName}
+              size="xl"
+              className="border-4 border-white shadow-md"
             />
-          ) : (
-            <div className="flex h-36 w-36 items-center justify-center rounded-full bg-blue-600 text-5xl font-bold text-white">
-              {profile.fullName.charAt(0).toUpperCase()}
-            </div>
-          )}
+            <button
+              onClick={onChangePhoto}
+              className="absolute bottom-1 right-1 flex h-7 w-7 items-center justify-center rounded-full bg-indigo-600 text-white shadow-md hover:bg-indigo-700 transition cursor-pointer"
+              title="Change photo"
+              aria-label="Change photo"
+            >
+              <Camera className="h-3.5 w-3.5" />
+            </button>
+          </div>
 
-          <button
+          <Button
+            variant="ghost"
+            size="xs"
             onClick={onChangePhoto}
-            className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+            className="mt-3 text-slate-500"
           >
             Change Photo
-          </button>
+          </Button>
         </div>
 
         {/* Profile Information */}
-        <div className="flex-1">
-          <div className="flex flex-col justify-between gap-4 md:flex-row">
+        <div className="flex-1 min-w-0 w-full text-center md:text-left">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">
+              <h1 className="text-2xl font-bold tracking-tight text-slate-900">
                 {profile.fullName}
               </h1>
-
-              <p className="mt-1 text-gray-500">
+              <p className="mt-0.5 text-xs text-slate-500">
                 {profile.email}
               </p>
             </div>
 
-            <button
+            <Button
+              variant="outline"
+              size="sm"
               onClick={onEdit}
-              className="rounded-lg bg-green-600 px-5 py-2 font-semibold text-white transition hover:bg-green-700"
+              leftIcon={<Edit3 className="h-3.5 w-3.5" />}
+              className="self-center md:self-start"
             >
               Edit Profile
-            </button>
+            </Button>
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <div>
-              <p className="text-sm font-semibold text-gray-500">
-                College
-              </p>
-
-              <p className="mt-1 text-gray-800">
-                {profile.college || "Not Added"}
-              </p>
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-slate-100 pt-5">
+            <div className="flex items-start gap-2.5 text-left">
+              <School className="h-4 w-4 text-indigo-500 shrink-0 mt-0.5" />
+              <div>
+                <span className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                  College
+                </span>
+                <span className="text-xs font-medium text-slate-800">
+                  {profile.college || "Not Added"}
+                </span>
+              </div>
             </div>
 
-            <div>
-              <p className="text-sm font-semibold text-gray-500">
-                Course
-              </p>
-
-              <p className="mt-1 text-gray-800">
-                {profile.course || "Not Added"}
-              </p>
+            <div className="flex items-start gap-2.5 text-left">
+              <GraduationCap className="h-4 w-4 text-indigo-500 shrink-0 mt-0.5" />
+              <div>
+                <span className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                  Course
+                </span>
+                <span className="text-xs font-medium text-slate-800">
+                  {profile.course || "MBBS"}{" "}
+                  {profile.year ? `(${profile.year})` : ""}
+                </span>
+              </div>
             </div>
 
-            <div>
-              <p className="text-sm font-semibold text-gray-500">
-                Academic Year
-              </p>
-
-              <p className="mt-1 text-gray-800">
-                {profile.year || "Not Added"}
-              </p>
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold text-gray-500">
-                Joined
-              </p>
-
-              <p className="mt-1 text-gray-800">
-                {new Date(profile.createdAt).toLocaleDateString()}
-              </p>
+            <div className="flex items-start gap-2.5 text-left">
+              <Calendar className="h-4 w-4 text-indigo-500 shrink-0 mt-0.5" />
+              <div>
+                <span className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                  Joined
+                </span>
+                <span className="text-xs font-medium text-slate-800">
+                  {new Date(profile.createdAt).toLocaleDateString()}
+                </span>
+              </div>
             </div>
           </div>
 
-          <div className="mt-8">
-            <p className="text-sm font-semibold text-gray-500">
-              Bio
-            </p>
-
-            <p className="mt-2 whitespace-pre-line text-gray-700">
-              {profile.bio || "No bio added yet."}
-            </p>
-          </div>
+          {profile.bio && (
+            <div className="mt-5 border-t border-slate-100 pt-4 text-left">
+              <span className="block text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                Bio
+              </span>
+              <p className="whitespace-pre-line text-xs text-slate-700 leading-relaxed">
+                {profile.bio}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>

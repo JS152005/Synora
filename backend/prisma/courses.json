@@ -1,0 +1,32 @@
+[
+  {
+    "code": "MBBS",
+    "name": "Bachelor of Medicine, Bachelor of Surgery",
+    "durationYears": 5,
+    "active": true
+  },
+  {
+    "code": "BDS",
+    "name": "Bachelor of Dental Surgery",
+    "durationYears": 5,
+    "active": true
+  },
+  {
+    "code": "BAMS",
+    "name": "Bachelor of Ayurvedic Medicine and Surgery",
+    "durationYears": 5,
+    "active": true
+  },
+  {
+    "code": "BHMS",
+    "name": "Bachelor of Homoeopathic Medicine and Surgery",
+    "durationYears": 5,
+    "active": true
+  },
+  {
+    "code": "BPT",
+    "name": "Bachelor of Physiotherapy",
+    "durationYears": 4,
+    "active": true
+  }
+]

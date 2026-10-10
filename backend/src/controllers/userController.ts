@@ -1,4 +1,4 @@
-﻿import { Request, Response } from "express";
+import { Request, Response } from "express";
 import { AuthRequest } from "../middleware/authMiddleware";
 import { UpdateProfile } from "../models/userModel";
 
@@ -177,9 +177,10 @@ export const getPublicProfile = async (
 
     try {
 
+        const id = req.params.id as string;
         const user =
             await getPublicProfileService(
-                req.params.id
+                id
             );
 
         res.status(200).json(user);

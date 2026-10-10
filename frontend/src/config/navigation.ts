@@ -1,69 +1,63 @@
+import type { LucideIcon } from "lucide-react";
+import {
+  LayoutDashboard,
+  Users,
+  BookOpen,
+  UserCheck,
+  MessageSquare,
+  Bell,
+  User,
+  Settings,
+} from "lucide-react";
+
 export interface NavigationItem {
   name: string;
   path: string;
-  icon?: string;
-  roles?: ("USER" | "ADMIN")[];
+  icon: LucideIcon;
+  badgeKey?: "requests" | "notifications";
 }
 
-export const navigation: NavigationItem[] = [
+export const navigationItems: NavigationItem[] = [
   {
     name: "Dashboard",
     path: "/dashboard",
-    icon: "layout-dashboard",
-    roles: ["USER", "ADMIN"],
+    icon: LayoutDashboard,
   },
   {
-    name: "Profile",
-    path: "/profile",
-    icon: "user",
-    roles: ["USER", "ADMIN"],
-  },
-  {
-    name: "Students",
+    name: "Discover Students",
     path: "/students",
-    icon: "search",
-    roles: ["USER", "ADMIN"],
+    icon: Users,
   },
   {
-    name: "Subjects",
+    name: "Medical Subjects",
     path: "/subjects",
-    icon: "book-open",
-    roles: ["USER", "ADMIN"],
+    icon: BookOpen,
   },
   {
-    name: "Requests",
+    name: "Partner Requests",
     path: "/requests",
-    icon: "user-plus",
-    roles: ["USER", "ADMIN"],
+    icon: UserCheck,
+    badgeKey: "requests",
   },
   {
-    name: "Chat",
+    name: "Study Chat",
     path: "/chat",
-    icon: "message-circle",
-    roles: ["USER", "ADMIN"],
+    icon: MessageSquare,
   },
   {
     name: "Notifications",
     path: "/notifications",
-    icon: "bell",
-    roles: ["USER", "ADMIN"],
+    icon: Bell,
+    badgeKey: "notifications",
+  },
+  {
+    name: "My Profile",
+    path: "/profile",
+    icon: User,
   },
   {
     name: "Settings",
     path: "/settings",
-    icon: "settings",
-    roles: ["USER", "ADMIN"],
-  },
-  {
-    name: "Admin",
-    path: "/admin",
-    icon: "shield",
-    roles: ["ADMIN"],
-  },
-  {
-    name: "Help",
-    path: "/help",
-    icon: "circle-help",
-    roles: ["USER", "ADMIN"],
+    icon: Settings,
   },
 ];

@@ -61,46 +61,54 @@ export const sendMessageService = async (
 
 
 
-const io = getIO();
+  // ===== Socket.IO Real-time Delivery =====
+  try {
+    const io = getIO();
+    io.to(conversationId).emit("newMessage", message);
 
-io.to(conversationId).emit("newMessage", message);
-
-const updatedConversation = await prisma.conversation.findUnique({
-  where: {
-    id: conversationId,
-  },
-  include: {
-    participants: {
+    const updatedConversation = await prisma.conversation.findUnique({
+      where: {
+        id: conversationId,
+      },
       include: {
-        user: {
-          select: {
-            id: true,
-            fullName: true,
-            profileImage: true,
-            email: true,
+        participants: {
+          include: {
+            user: {
+              select: {
+                id: true,
+                fullName: true,
+                profileImage: true,
+                email: true,
+              },
+            },
+          },
+        },
+        lastMessage: {
+          include: {
+            sender: {
+              select: {
+                id: true,
+                fullName: true,
+              },
+            },
           },
         },
       },
-    },
-    lastMessage: {
-      include: {
-        sender: {
-          select: {
-            id: true,
-            fullName: true,
-          },
-        },
-      },
-    },
-  },
-});
+    });
 
-io.to(conversationId).emit(
-  "conversationUpdated",
-  updatedConversation
-);
+    io.to(conversationId).emit("conversationUpdated", updatedConversation);
 
-return message;
+    if (updatedConversation?.participants) {
+      for (const p of updatedConversation.participants) {
+        io.to(`user:${p.userId}`).emit("newMessage", message);
+        io.to(`user:${p.userId}`).emit("conversationUpdated", updatedConversation);
+      }
+    }
+  } catch {
+    // Socket.IO is not initialized in standalone tests or CLI scripts
+  }
+
+  return message;
 
 
 

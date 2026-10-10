@@ -2,11 +2,16 @@ export interface Profile {
   id: string;
   fullName: string;
   email: string;
+  personalEmail?: string | null;
+  collegeEmail?: string | null;
   profileImage: string | null;
   bio: string | null;
   college: string | null;
   course: string | null;
   year: string | null;
+  isVerified?: boolean;
+  hasVerifiedMed?: boolean;
+  status?: string;
   createdAt: string;
 }
 

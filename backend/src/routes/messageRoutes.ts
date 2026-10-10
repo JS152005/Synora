@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { authenticate } from "../middleware/authMiddleware";
+import { authenticate, requireVerified } from "../middleware/authMiddleware";
 import {
   sendMessage,
   getMessages,
@@ -9,28 +9,15 @@ import {
 
 const router = Router();
 
-router.post(
-  "/",
-  authenticate,
-  sendMessage
-);
+// Protect all message routes: Authenticated & Verified status required
+router.use(authenticate);
+router.use(requireVerified);
 
-router.get(
-  "/:conversationId",
-  authenticate,
-  getMessages
-);
-
-router.patch(
-  "/read/:conversationId",
-  authenticate,
-  markConversationAsRead
-);
-
-router.delete(
-  "/:messageId",
-  authenticate,
-  deleteMessage
-);
+router.post("/", sendMessage);
+router.post("/send", sendMessage);
+router.get("/:conversationId", getMessages);
+router.patch("/read/:conversationId", markConversationAsRead);
+router.patch("/:conversationId/read", markConversationAsRead);
+router.delete("/:messageId", deleteMessage);
 
 export default router;

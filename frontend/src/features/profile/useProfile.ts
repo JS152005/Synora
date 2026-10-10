@@ -1,6 +1,10 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
+import { getErrorMessage } from "../../utils/error";
+import { useAppDispatch } from "../../store/hooks";
+import { updateUser } from "../auth/authSlice";
+
 import profileService from "./profileService";
 import type { UpdateProfilePayload } from "./profileTypes";
 
@@ -8,6 +12,7 @@ const PROFILE_QUERY_KEY = ["profile"];
 
 export function useProfile() {
   const queryClient = useQueryClient();
+  const dispatch = useAppDispatch();
 
   const {
     data: profile,
@@ -26,15 +31,18 @@ export function useProfile() {
 
     onSuccess: (response) => {
       queryClient.setQueryData(PROFILE_QUERY_KEY, response.user);
+      queryClient.invalidateQueries({ queryKey: PROFILE_QUERY_KEY });
+      queryClient.invalidateQueries({ queryKey: ["currentUser"] });
+      queryClient.invalidateQueries({ queryKey: ["user"] });
+      if (response.user) {
+        dispatch(updateUser(response.user as any));
+      }
 
       toast.success(response.message || "Profile updated successfully.");
     },
 
-    onError: (err: any) => {
-      toast.error(
-        err?.response?.data?.message ??
-          "Failed to update profile."
-      );
+    onError: (err: unknown) => {
+      toast.error(getErrorMessage(err, "Failed to update profile."));
     },
   });
 
@@ -50,11 +58,8 @@ export function useProfile() {
       );
     },
 
-    onError: (err: any) => {
-      toast.error(
-        err?.response?.data?.message ??
-          "Failed to upload profile image."
-      );
+    onError: (err: unknown) => {
+      toast.error(getErrorMessage(err, "Failed to upload profile image."));
     },
   });
 

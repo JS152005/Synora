@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { authenticate } from "../middleware/authMiddleware";
+import { authenticate, requireVerified } from "../middleware/authMiddleware";
 import {
   getNotifications,
   markNotificationAsRead,
@@ -9,28 +9,14 @@ import {
 
 const router = Router();
 
-router.get(
-  "/",
-  authenticate,
-  getNotifications
-);
+// Protect all notification routes: Authenticated & Verified status required
+router.use(authenticate);
+router.use(requireVerified);
 
-router.patch(
-  "/read-all",
-  authenticate,
-  markAllNotificationsAsRead
-);
-
-router.patch(
-  "/read/:id",
-  authenticate,
-  markNotificationAsRead
-);
-
-router.delete(
-  "/:id",
-  authenticate,
-  deleteNotification
-);
+router.get("/", getNotifications);
+router.patch("/read-all", markAllNotificationsAsRead);
+router.patch("/read/:id", markNotificationAsRead);
+router.patch("/:id", markNotificationAsRead);
+router.delete("/:id", deleteNotification);
 
 export default router;

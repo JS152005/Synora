@@ -1,4 +1,5 @@
-import { Request, Response } from "express";
+import { Response } from "express";
+import { AuthRequest } from "../middleware/authMiddleware";
 import {
   sendMessageService,
   getMessagesService,
@@ -7,17 +8,18 @@ import {
 } from "../services/messageService";
 
 export const sendMessage = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const senderId = req.user!.id;
-    const { conversationId, content, type } = req.body;
+    const { conversationId, content, text, type } = req.body;
+    const messageContent = content || text;
 
     const message = await sendMessageService(
       senderId,
       conversationId,
-      content,
+      messageContent,
       type
     );
 
@@ -35,12 +37,12 @@ export const sendMessage = async (
 };
 
 export const getMessages = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const userId = req.user!.id;
-    const { conversationId } = req.params;
+    const conversationId = req.params.conversationId as string;
 
     const messages = await getMessagesService(
       userId,
@@ -52,7 +54,7 @@ export const getMessages = async (
       data: messages,
     });
   } catch (error: any) {
-    res.status(404).json({
+    res.status(400).json({
       success: false,
       message: error.message,
     });
@@ -60,14 +62,14 @@ export const getMessages = async (
 };
 
 export const markConversationAsRead = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const userId = req.user!.id;
-    const { conversationId } = req.params;
+    const conversationId = req.params.conversationId as string;
 
-    await markConversationAsReadService(
+    const result = await markConversationAsReadService(
       userId,
       conversationId
     );
@@ -75,6 +77,7 @@ export const markConversationAsRead = async (
     res.status(200).json({
       success: true,
       message: "Conversation marked as read.",
+      data: result,
     });
   } catch (error: any) {
     res.status(400).json({
@@ -85,14 +88,14 @@ export const markConversationAsRead = async (
 };
 
 export const deleteMessage = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const userId = req.user!.id;
-    const { messageId } = req.params;
+    const messageId = req.params.messageId as string;
 
-    const message = await deleteMessageService(
+    const result = await deleteMessageService(
       userId,
       messageId
     );
@@ -100,7 +103,7 @@ export const deleteMessage = async (
     res.status(200).json({
       success: true,
       message: "Message deleted successfully.",
-      data: message,
+      data: result,
     });
   } catch (error: any) {
     res.status(400).json({

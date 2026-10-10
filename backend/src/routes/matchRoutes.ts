@@ -5,12 +5,13 @@ import {
   getHelpersByTopic,
   getLearnersByTopic,
 } from "../controllers/matchController";
-import { verifyToken } from "../middleware/authMiddleware";
+import { authenticate, requireVerified } from "../middleware/authMiddleware";
 
 const router = Router();
 
-// Protect all match routes
-router.use(verifyToken);
+// Protect all match routes: Authentication & Verified status required
+router.use(authenticate);
+router.use(requireVerified);
 
 // Find helpers for all my learning topics
 router.get("/helpers", getHelpers);

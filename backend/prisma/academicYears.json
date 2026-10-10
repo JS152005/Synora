@@ -1,0 +1,62 @@
+[
+  {
+    "courseCode": "MBBS",
+    "yearCode": "1st Year",
+    "displayName": "1st Professional (Phase I - Pre-Clinical)",
+    "order": 1
+  },
+  {
+    "courseCode": "MBBS",
+    "yearCode": "2nd Year",
+    "displayName": "2nd Professional (Phase II - Para-Clinical)",
+    "order": 2
+  },
+  {
+    "courseCode": "MBBS",
+    "yearCode": "3rd Year (Part 1)",
+    "displayName": "3rd Professional Part 1 (Phase III - Clinical)",
+    "order": 3
+  },
+  {
+    "courseCode": "MBBS",
+    "yearCode": "Final Year (Part 2)",
+    "displayName": "3rd Professional Part 2 (Final Clinical)",
+    "order": 4
+  },
+  {
+    "courseCode": "MBBS",
+    "yearCode": "Intern (CRMI)",
+    "displayName": "Compulsory Rotating Medical Internship (CRMI)",
+    "order": 5
+  },
+  {
+    "courseCode": "BDS",
+    "yearCode": "1st Year",
+    "displayName": "1st Year BDS",
+    "order": 1
+  },
+  {
+    "courseCode": "BDS",
+    "yearCode": "2nd Year",
+    "displayName": "2nd Year BDS",
+    "order": 2
+  },
+  {
+    "courseCode": "BDS",
+    "yearCode": "3rd Year",
+    "displayName": "3rd Year BDS",
+    "order": 3
+  },
+  {
+    "courseCode": "BDS",
+    "yearCode": "4th Year",
+    "displayName": "4th Year BDS",
+    "order": 4
+  },
+  {
+    "courseCode": "BDS",
+    "yearCode": "Intern",
+    "displayName": "Rotatory Dental Internship",
+    "order": 5
+  }
+]

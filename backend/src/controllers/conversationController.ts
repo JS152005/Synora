@@ -1,4 +1,5 @@
-import { Request, Response } from "express";
+import { Response } from "express";
+import { AuthRequest } from "../middleware/authMiddleware";
 import {
   createConversationService,
   getConversationsService,
@@ -6,7 +7,7 @@ import {
 } from "../services/conversationService";
 
 export const createConversation = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
@@ -32,7 +33,7 @@ export const createConversation = async (
 };
 
 export const getConversations = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
@@ -53,12 +54,12 @@ export const getConversations = async (
 };
 
 export const getConversationById = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const userId = req.user!.id;
-    const { id } = req.params;
+    const id = req.params.id as string;
 
     const conversation = await getConversationByIdService(
       userId,

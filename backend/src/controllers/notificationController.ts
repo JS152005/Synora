@@ -1,4 +1,5 @@
-import { Request, Response } from "express";
+import { Response } from "express";
+import { AuthRequest } from "../middleware/authMiddleware";
 import {
   getNotificationsService,
   markNotificationAsReadService,
@@ -7,7 +8,7 @@ import {
 } from "../services/notificationService";
 
 export const getNotifications = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
@@ -28,12 +29,12 @@ export const getNotifications = async (
 };
 
 export const markNotificationAsRead = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const userId = req.user!.id;
-    const { id } = req.params;
+    const id = req.params.id as string;
 
     const notification = await markNotificationAsReadService(
       userId,
@@ -54,7 +55,7 @@ export const markNotificationAsRead = async (
 };
 
 export const markAllNotificationsAsRead = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
@@ -76,12 +77,12 @@ export const markAllNotificationsAsRead = async (
 };
 
 export const deleteNotification = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const userId = req.user!.id;
-    const { id } = req.params;
+    const id = req.params.id as string;
 
     const result = await deleteNotificationService(
       userId,

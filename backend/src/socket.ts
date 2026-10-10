@@ -1,5 +1,7 @@
 import { Server, Socket } from "socket.io";
 import { Server as HttpServer } from "http";
+import jwt from "jsonwebtoken";
+import prisma from "./config/prisma";
 
 let io: Server;
 
@@ -13,33 +15,86 @@ export const initializeSocket = (httpServer: HttpServer) => {
     },
   });
 
+  // Socket Authentication Middleware
+  io.use(async (socket: Socket, next) => {
+    try {
+      const token =
+        socket.handshake.auth?.token ||
+        (socket.handshake.query?.token as string) ||
+        socket.handshake.headers?.authorization?.replace("Bearer ", "");
+
+      if (!token) {
+        // Allow unauthenticated connection but with restricted access
+        return next();
+      }
+
+      const decoded = jwt.verify(
+        token,
+        process.env.JWT_SECRET as string
+      ) as { id: string; email: string };
+
+      socket.data.userId = decoded.id;
+      next();
+    } catch (err) {
+      // Token expired or invalid
+      next();
+    }
+  });
+
   io.on("connection", (socket: Socket) => {
-    console.log(`✅ Socket Connected: ${socket.id}`);
+    const currentUserId = socket.data.userId;
+
+    if (currentUserId) {
+      onlineUsers.set(currentUserId, socket.id);
+      socket.join(`user:${currentUserId}`);
+      io.emit("userOnline", { userId: currentUserId });
+    }
 
     socket.on("register", (userId: string) => {
-      onlineUsers.set(userId, socket.id);
-
-      console.log(`🟢 User Online: ${userId}`);
-
-      io.emit("userOnline", {
-        userId,
-      });
+      // If authenticated socket matches or client registers
+      const effectiveUserId = socket.data.userId || userId;
+      if (effectiveUserId) {
+        socket.data.userId = effectiveUserId;
+        onlineUsers.set(effectiveUserId, socket.id);
+        socket.join(`user:${effectiveUserId}`);
+        io.emit("userOnline", { userId: effectiveUserId });
+      }
     });
 
-    socket.on("joinConversation", (conversationId: string) => {
-      socket.join(conversationId);
+    // Secure conversation room joining with participant authorization check
+    socket.on("joinConversation", async (conversationId: string) => {
+      const userId = socket.data.userId;
 
-      console.log(
-        `📥 Socket ${socket.id} joined conversation ${conversationId}`
-      );
+      if (!userId) {
+        socket.emit("error", {
+          message: "Authentication required to join conversation rooms.",
+        });
+        return;
+      }
+
+      try {
+        const isParticipant = await prisma.conversationParticipant.findFirst({
+          where: {
+            conversationId,
+            userId,
+          },
+        });
+
+        if (!isParticipant) {
+          socket.emit("error", {
+            message: "Unauthorized. You are not a participant in this conversation.",
+          });
+          return;
+        }
+
+        socket.join(conversationId);
+      } catch (err) {
+        console.error("Socket join error:", err);
+      }
     });
 
     socket.on("leaveConversation", (conversationId: string) => {
       socket.leave(conversationId);
-
-      console.log(
-        `📤 Socket ${socket.id} left conversation ${conversationId}`
-      );
     });
 
     socket.on("disconnect", () => {
@@ -57,11 +112,7 @@ export const initializeSocket = (httpServer: HttpServer) => {
         io.emit("userOffline", {
           userId: disconnectedUserId,
         });
-
-        console.log(`🔴 User Offline: ${disconnectedUserId}`);
       }
-
-      console.log(`❌ Socket Disconnected: ${socket.id}`);
     });
   });
 

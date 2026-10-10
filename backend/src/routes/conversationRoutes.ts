@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { authenticate } from "../middleware/authMiddleware";
+import { authenticate, requireVerified } from "../middleware/authMiddleware";
 import {
   createConversation,
   getConversations,
@@ -8,22 +8,12 @@ import {
 
 const router = Router();
 
-router.post(
-  "/",
-  authenticate,
-  createConversation
-);
+// Protect all conversation routes: Authenticated & Verified status required
+router.use(authenticate);
+router.use(requireVerified);
 
-router.get(
-  "/",
-  authenticate,
-  getConversations
-);
-
-router.get(
-  "/:id",
-  authenticate,
-  getConversationById
-);
+router.post("/", createConversation);
+router.get("/", getConversations);
+router.get("/:id", getConversationById);
 
 export default router;

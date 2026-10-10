@@ -4,12 +4,13 @@ import {
   getMyTopics,
   removeUserTopic,
 } from "../controllers/userTopicController";
-import { verifyToken } from "../middleware/authMiddleware";
+import { authenticate, requireVerified } from "../middleware/authMiddleware";
 
 const router = Router();
 
-// Protect all routes
-router.use(verifyToken);
+// Protect all topic routes: requires authenticated and verified student
+router.use(authenticate);
+router.use(requireVerified);
 
 // Add a topic
 router.post("/", createUserTopic);

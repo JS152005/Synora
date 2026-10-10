@@ -44,16 +44,55 @@ enum NotificationType {
   REQUEST_REJECTED
 }
 
+enum UserStatus {
+  PENDING_EMAIL_VERIFICATION
+  PERSONAL_EMAIL_VERIFIED
+  COLLEGE_EMAIL_VERIFIED
+  PENDING_INSTITUTION_VERIFICATION
+  VERIFIED
+  SUSPENDED
+  DEACTIVATED
+}
+
+enum EmailVerificationType {
+  PERSONAL
+  COLLEGE
+  PASSWORD_RESET
+  PASSWORD_CHANGE
+}
+
 model User {
   id           String  @id @default(cuid())
   fullName     String
-  email        String  @unique
+  email        String  @unique // Primary / login email (normalized)
+  personalEmail String? @unique // Normalized personal email
+  collegeEmail  String? @unique // Normalized college email
   password     String
   profileImage String?
   bio          String?
-  college      String?
-  course       String?
-  year         String?
+  role         String  @default("STUDENT") // STUDENT or ADMIN
+
+  college      String? // Legacy / display college name
+  collegeId    String? // Relation to College model
+  collegeRef   College? @relation(fields: [collegeId], references: [id], onDelete: SetNull)
+
+  course       String? // Legacy / display course name
+  courseId     String? // Relation to Course model
+  courseRef    Course?  @relation(fields: [courseId], references: [id], onDelete: SetNull)
+
+  year         String? // Academic year string (e.g. "1st Year", "2nd Year", "3rd Year (Part 1)", "Final Year (Part 2)", "Intern (CRMI)")
+
+  // Preferences & settings
+  emailNotifications Boolean @default(true)
+  livePresence       Boolean @default(true)
+  theme              String  @default("light")
+
+  // Verification state machine
+  personalEmailVerified Boolean    @default(false)
+  collegeEmailVerified  Boolean    @default(false)
+  isVerified            Boolean    @default(false)
+  status                UserStatus @default(PENDING_EMAIL_VERIFICATION)
+  verificationStep      String?    @default("PERSONAL_EMAIL")
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -67,6 +106,114 @@ model User {
 
   conversationMembers ConversationParticipant[]
   sentMessages        Message[]                 @relation("MessageSender")
+
+  emailVerifications EmailVerification[]
+
+  @@index([status])
+  @@index([isVerified])
+  @@index([collegeId])
+  @@index([role])
+}
+
+model PendingRegistration {
+  id                    String   @id @default(cuid())
+  fullName              String
+  email                 String   @unique // Normalized personal email
+  personalEmail         String
+  collegeEmail          String?
+  passwordHash          String
+  college               String?
+  collegeId             String?
+  course                String?
+  courseId              String?
+  year                  String?
+  hasCollegeEmail       Boolean  @default(false)
+  personalEmailVerified Boolean  @default(false)
+  collegeEmailVerified  Boolean  @default(false)
+  verificationStep      String   @default("PERSONAL_EMAIL")
+  expiresAt             DateTime
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  emailVerifications    EmailVerification[]
+
+  @@index([email])
+  @@index([expiresAt])
+}
+
+model College {
+  id                String   @id @default(cuid())
+  code              String   @unique
+  name              String
+  officialName      String?
+  city              String
+  state             String
+  country           String   @default("India")
+  type              String?
+  emailDomains      String[]
+  hasVerifiedDomain Boolean  @default(false)
+  active            Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users User[]
+
+  @@index([state])
+  @@index([name])
+}
+
+model Course {
+  id            String   @id @default(cuid())
+  code          String   @unique
+  name          String
+  durationYears Int      @default(5)
+  active        Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users         User[]
+  academicYears AcademicYear[]
+}
+
+model AcademicYear {
+  id          String   @id @default(cuid())
+  courseId    String
+  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  yearCode    String
+  displayName String
+  order       Int
+  active      Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([courseId, yearCode])
+  @@index([courseId])
+}
+
+model EmailVerification {
+  id                    String                @id @default(cuid())
+  userId                String?
+  user                  User?                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pendingRegistrationId String?
+  pendingRegistration   PendingRegistration?  @relation(fields: [pendingRegistrationId], references: [id], onDelete: Cascade)
+  email                 String
+  emailType             EmailVerificationType
+  otpHash               String
+  expiresAt             DateTime
+  attempts              Int                   @default(0)
+  maxAttempts           Int                   @default(5)
+  cooldownUntil         DateTime?
+  isUsed                Boolean               @default(false)
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([userId, emailType])
+  @@index([pendingRegistrationId, emailType])
+  @@index([email])
 }
 
 model Subject {

@@ -1,69 +1,25 @@
-﻿import { Router } from "express";
-import { verifyToken } from "../middleware/authMiddleware";
+import { Router } from "express";
+import { authenticate, requireVerified } from "../middleware/authMiddleware";
 
 import {
-    getMe,
-    updateProfile,
-    searchUsers,
-    discoverUsers,
-    getPublicProfile,
-    getRecommendations
+  getMe,
+  updateProfile,
+  searchUsers,
+  discoverUsers,
+  getPublicProfile,
+  getRecommendations,
 } from "../controllers/userController";
 
 const router = Router();
 
-/**
- * ==========================================================
- * Discovery
- * ==========================================================
- */
+// My Profile (needs authentication, can view own unverified/verified status)
+router.get("/me", authenticate, getMe);
 
-// Discover Users
-router.get(
-    "/discover",
-    verifyToken,
-    discoverUsers
-);
-
-// Search Users
-router.get(
-    "/search",
-    verifyToken,
-    searchUsers
-);
-
-// Recommendations
-router.get(
-    "/recommendations",
-    verifyToken,
-    getRecommendations
-);
-
-// Public Profile
-router.get(
-    "/:id/profile",
-    verifyToken,
-    getPublicProfile
-);
-
-/**
- * ==========================================================
- * User Profile
- * ==========================================================
- */
-
-// My Profile
-router.get(
-    "/me",
-    verifyToken,
-    getMe
-);
-
-// Update Profile
-router.put(
-    "/profile",
-    verifyToken,
-    updateProfile
-);
+// Verified Medical Student Access Only
+router.put("/profile", authenticate, requireVerified, updateProfile);
+router.get("/discover", authenticate, requireVerified, discoverUsers);
+router.get("/search", authenticate, requireVerified, searchUsers);
+router.get("/recommendations", authenticate, requireVerified, getRecommendations);
+router.get("/:id/profile", authenticate, requireVerified, getPublicProfile);
 
 export default router;

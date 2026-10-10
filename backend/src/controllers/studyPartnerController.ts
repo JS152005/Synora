@@ -1,4 +1,5 @@
-import { Request, Response } from "express";
+import { Response } from "express";
+import { AuthRequest } from "../middleware/authMiddleware";
 import {
   sendStudyPartnerRequestService,
   cancelStudyPartnerRequestService,
@@ -10,7 +11,7 @@ import {
 } from "../services/studyPartnerService";
 
 export const sendStudyPartnerRequest = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
@@ -36,12 +37,12 @@ export const sendStudyPartnerRequest = async (
 };
 
 export const cancelStudyPartnerRequest = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const senderId = req.user!.id;
-    const { requestId } = req.params;
+    const requestId = req.params.requestId as string;
 
     const request = await cancelStudyPartnerRequestService(
       senderId,
@@ -62,12 +63,12 @@ export const cancelStudyPartnerRequest = async (
 };
 
 export const acceptStudyPartnerRequest = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const receiverId = req.user!.id;
-    const { requestId } = req.params;
+    const requestId = req.params.requestId as string;
 
     const request = await acceptStudyPartnerRequestService(
       receiverId,
@@ -88,12 +89,12 @@ export const acceptStudyPartnerRequest = async (
 };
 
 export const rejectStudyPartnerRequest = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
     const receiverId = req.user!.id;
-    const { requestId } = req.params;
+    const requestId = req.params.requestId as string;
 
     const request = await rejectStudyPartnerRequestService(
       receiverId,
@@ -114,7 +115,7 @@ export const rejectStudyPartnerRequest = async (
 };
 
 export const getIncomingRequests = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
@@ -135,7 +136,7 @@ export const getIncomingRequests = async (
 };
 
 export const getOutgoingRequests = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {
@@ -156,7 +157,7 @@ export const getOutgoingRequests = async (
 };
 
 export const getStudyPartners = async (
-  req: Request,
+  req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {

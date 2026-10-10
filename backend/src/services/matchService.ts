@@ -1,6 +1,5 @@
 import { PrismaClient, UserTopicType } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "../config/prisma";
 
 type MatchUser = {
   id: string;
@@ -11,6 +10,7 @@ type MatchUser = {
   college: string | null;
   course: string | null;
   year: string | null;
+  isVerified: boolean;
 };
 
 type MatchTopic = {
@@ -31,6 +31,7 @@ const buildMatches = async (
   myType: UserTopicType,
   targetType: UserTopicType
 ): Promise<MatchResult[]> => {
+  // Find topics for current user
   const myTopics = await prisma.userTopic.findMany({
     where: {
       userId,
@@ -45,6 +46,7 @@ const buildMatches = async (
 
   const topicIds = myTopics.map((t) => t.topicId);
 
+  // Match only with other verified medical students sharing exact topic IDs
   const matches = await prisma.userTopic.findMany({
     where: {
       topicId: {
@@ -53,6 +55,10 @@ const buildMatches = async (
       type: targetType,
       NOT: {
         userId,
+      },
+      user: {
+        isVerified: true,
+        status: "VERIFIED",
       },
     },
     include: {
@@ -67,6 +73,7 @@ const buildMatches = async (
           college: true,
           course: true,
           year: true,
+          isVerified: true,
         },
       },
     },
@@ -81,6 +88,9 @@ const buildMatches = async (
   >();
 
   for (const match of matches) {
+    // Prevent self-matching
+    if (match.userId === userId) continue;
+
     const existing = grouped.get(match.userId);
 
     if (!existing) {
@@ -89,15 +99,19 @@ const buildMatches = async (
         matchedTopics: [match.topic],
       });
     } else {
-      existing.matchedTopics.push(match.topic);
+      // Prevent duplicate topics in list
+      if (!existing.matchedTopics.some((t) => t.id === match.topic.id)) {
+        existing.matchedTopics.push(match.topic);
+      }
     }
   }
 
   const results: MatchResult[] = [];
 
   for (const value of grouped.values()) {
-    const percentage = Math.round(
-      (value.matchedTopics.length / myTopics.length) * 100
+    const percentage = Math.min(
+      100,
+      Math.round((value.matchedTopics.length / myTopics.length) * 100)
     );
 
     results.push({
@@ -143,6 +157,10 @@ export const findHelpersForTopic = async (
       NOT: {
         userId,
       },
+      user: {
+        isVerified: true,
+        status: "VERIFIED",
+      },
     },
     include: {
       topic: true,
@@ -156,6 +174,7 @@ export const findHelpersForTopic = async (
           college: true,
           course: true,
           year: true,
+          isVerified: true,
         },
       },
     },
@@ -170,6 +189,8 @@ export const findHelpersForTopic = async (
   >();
 
   for (const match of matches) {
+    if (match.userId === userId) continue;
+
     const existing = grouped.get(match.userId);
 
     if (!existing) {
@@ -178,7 +199,9 @@ export const findHelpersForTopic = async (
         matchedTopics: [match.topic],
       });
     } else {
-      existing.matchedTopics.push(match.topic);
+      if (!existing.matchedTopics.some((t) => t.id === match.topic.id)) {
+        existing.matchedTopics.push(match.topic);
+      }
     }
   }
 
@@ -200,6 +223,10 @@ export const findLearnersForTopic = async (
       NOT: {
         userId,
       },
+      user: {
+        isVerified: true,
+        status: "VERIFIED",
+      },
     },
     include: {
       topic: true,
@@ -213,6 +240,7 @@ export const findLearnersForTopic = async (
           college: true,
           course: true,
           year: true,
+          isVerified: true,
         },
       },
     },
@@ -227,6 +255,8 @@ export const findLearnersForTopic = async (
   >();
 
   for (const match of matches) {
+    if (match.userId === userId) continue;
+
     const existing = grouped.get(match.userId);
 
     if (!existing) {
@@ -235,7 +265,9 @@ export const findLearnersForTopic = async (
         matchedTopics: [match.topic],
       });
     } else {
-      existing.matchedTopics.push(match.topic);
+      if (!existing.matchedTopics.some((t) => t.id === match.topic.id)) {
+        existing.matchedTopics.push(match.topic);
+      }
     }
   }
 

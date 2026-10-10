@@ -2,20 +2,47 @@ import prisma from "../config/prisma";
 import { createNotificationService } from "./notificationService";
 import { createConversationService } from "./conversationService";
 
+const SAFE_USER_SELECT = {
+  id: true,
+  fullName: true,
+  profileImage: true,
+  bio: true,
+  college: true,
+  course: true,
+  year: true,
+  isVerified: true,
+  collegeEmailVerified: true,
+  collegeEmail: true,
+};
+
 export const sendStudyPartnerRequestService = async (
   senderId: string,
   receiverId: string
 ) => {
   if (senderId === receiverId) {
-    throw new Error("You cannot send a request to yourself.");
+    throw new Error("You cannot send a study partner request to yourself.");
   }
 
-  const receiver = await prisma.user.findUnique({
-    where: { id: receiverId },
+  // Ensure sender is verified
+  const sender = await prisma.user.findUnique({
+    where: { id: senderId },
+  });
+
+  if (!sender || !sender.isVerified) {
+    throw new Error("Only verified medical students can send study partner requests.");
+  }
+
+  // Ensure receiver exists and is verified
+  const receiver = await prisma.user.findFirst({
+    where: {
+      id: receiverId,
+      isVerified: true,
+      status: "VERIFIED",
+    },
   });
 
   if (!receiver) {
-    throw new Error("User not found.");
+    throw new Error("Target student not found or account is not verified.");
   }
 
   const existingRequest = await prisma.studyPartnerRequest.findFirst({
@@ -30,10 +57,10 @@ export const sendStudyPartnerRequestService = async (
   if (existingRequest) {
     switch (existingRequest.status) {
       case "PENDING":
-        throw new Error("A study partner request already exists.");
+        throw new Error("A study partner request already exists with this student.");
 
       case "ACCEPTED":
-        throw new Error("You are already study partners.");
+        throw new Error("You are already connected study partners.");
 
       case "REJECTED":
       case "CANCELLED":
@@ -53,15 +80,7 @@ export const sendStudyPartnerRequestService = async (
     },
     include: {
       receiver: {
-        select: {
-          id: true,
-          fullName: true,
-          email: true,
-          profileImage: true,
-          college: true,
-          course: true,
-          year: true,
-        },
+        select: SAFE_USER_SELECT,
       },
     },
   });
@@ -69,7 +88,7 @@ export const sendStudyPartnerRequestService = async (
   await createNotificationService(
     receiverId,
     "Study Partner Request",
-    "You received a new study partner request.",
+    `${sender.fullName} sent you a study partner request.`,
     "STUDY_REQUEST"
   );
 
@@ -89,7 +108,7 @@ export const cancelStudyPartnerRequestService = async (
   }
 
   if (request.senderId !== senderId) {
-    throw new Error("Unauthorized.");
+    throw new Error("Unauthorized. You can only cancel your own requests.");
   }
 
   if (request.status !== "PENDING") {
@@ -110,6 +129,11 @@ export const acceptStudyPartnerRequestService = async (
 ) => {
   const request = await prisma.studyPartnerRequest.findUnique({
     where: { id: requestId },
+    include: {
+      sender: {
+        select: SAFE_USER_SELECT,
+      },
+    },
   });
 
   if (!request) {
@@ -117,7 +141,7 @@ export const acceptStudyPartnerRequestService = async (
   }
 
   if (request.receiverId !== receiverId) {
-    throw new Error("Unauthorized.");
+    throw new Error("Unauthorized. Only the recipient can accept this request.");
   }
 
   if (request.status !== "PENDING") {
@@ -131,16 +155,21 @@ export const acceptStudyPartnerRequestService = async (
     },
   });
 
-  // Automatically create a conversation between the two users
+  // Automatically create mutual conversation
   await createConversationService(
     updatedRequest.senderId,
     updatedRequest.receiverId
   );
 
+  const receiver = await prisma.user.findUnique({
+    where: { id: receiverId },
+    select: { fullName: true },
+  });
+
   await createNotificationService(
     updatedRequest.senderId,
     "Study Partner Request Accepted",
-    "Your study partner request has been accepted.",
+    `${receiver?.fullName || "Your peer"} accepted your study partner request. Direct chat is now open!`,
     "REQUEST_ACCEPTED"
   );
 
@@ -160,7 +189,7 @@ export const rejectStudyPartnerRequestService = async (
   }
 
   if (request.receiverId !== receiverId) {
-    throw new Error("Unauthorized.");
+    throw new Error("Unauthorized. Only the recipient can decline this request.");
   }
 
   if (request.status !== "PENDING") {
@@ -176,33 +205,27 @@ export const rejectStudyPartnerRequestService = async (
 
   await createNotificationService(
     updatedRequest.senderId,
-    "Study Partner Request Rejected",
-    "Your study partner request has been rejected.",
+    "Study Partner Request Declined",
+    "Your study partner request was declined.",
     "REQUEST_REJECTED"
   );
 
   return updatedRequest;
 };
 
-export const getIncomingRequestsService = async (
-  userId: string
-) => {
+export const getIncomingRequestsService = async (userId: string) => {
   return prisma.studyPartnerRequest.findMany({
     where: {
       receiverId: userId,
       status: "PENDING",
+      sender: {
+        isVerified: true,
+        status: "VERIFIED",
+      },
     },
     include: {
       sender: {
-        select: {
-          id: true,
-          fullName: true,
-          email: true,
-          profileImage: true,
-          college: true,
-          course: true,
-          year: true,
-        },
+        select: SAFE_USER_SELECT,
       },
     },
     orderBy: {
@@ -211,25 +234,19 @@ export const getIncomingRequestsService = async (
   });
 };
 
-export const getOutgoingRequestsService = async (
-  userId: string
-) => {
+export const getOutgoingRequestsService = async (userId: string) => {
   return prisma.studyPartnerRequest.findMany({
     where: {
       senderId: userId,
       status: "PENDING",
+      receiver: {
+        isVerified: true,
+        status: "VERIFIED",
+      },
     },
     include: {
       receiver: {
-        select: {
-          id: true,
-          fullName: true,
-          email: true,
-          profileImage: true,
-          college: true,
-          course: true,
-          year: true,
-        },
+        select: SAFE_USER_SELECT,
       },
     },
     orderBy: {
@@ -238,9 +255,7 @@ export const getOutgoingRequestsService = async (
   });
 };
 
-export const getStudyPartnersService = async (
-  userId: string
-) => {
+export const getStudyPartnersService = async (userId: string) => {
   const partners = await prisma.studyPartnerRequest.findMany({
     where: {
       status: "ACCEPTED",
@@ -254,8 +269,12 @@ export const getStudyPartnersService = async (
       ],
     },
     include: {
-      sender: true,
-      receiver: true,
+      sender: {
+        select: SAFE_USER_SELECT,
+      },
+      receiver: {
+        select: SAFE_USER_SELECT,
+      },
     },
     orderBy: {
       updatedAt: "desc",
@@ -266,7 +285,6 @@ export const getStudyPartnersService = async (
     if (partner.senderId === userId) {
       return partner.receiver;
     }
-
     return partner.sender;
   });
 };

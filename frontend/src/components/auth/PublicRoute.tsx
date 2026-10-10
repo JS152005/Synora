@@ -9,18 +9,7 @@ interface PublicRouteProps {
 function PublicRoute({
   children,
 }: PublicRouteProps) {
-  const {
-    isAuthenticated,
-    isLoading,
-  } = useAuth();
-
-  if (isLoading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        Loading...
-      </div>
-    );
-  }
+  const { isAuthenticated } = useAuth();
 
   if (isAuthenticated) {
     return <Navigate to="/dashboard" replace />;

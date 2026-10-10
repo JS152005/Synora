@@ -1,5 +1,18 @@
 import prisma from "../config/prisma";
 
+const SAFE_USER_SELECT = {
+  id: true,
+  fullName: true,
+  email: true,
+  profileImage: true,
+  college: true,
+  course: true,
+  year: true,
+  isVerified: true,
+  collegeEmailVerified: true,
+  collegeEmail: true,
+};
+
 export const createConversationService = async (
   userId: string,
   partnerId: string
@@ -8,14 +21,30 @@ export const createConversationService = async (
     throw new Error("You cannot create a conversation with yourself.");
   }
 
-  const partner = await prisma.user.findUnique({
+  const partner = await prisma.user.findFirst({
     where: {
       id: partnerId,
+      isVerified: true,
     },
   });
 
   if (!partner) {
-    throw new Error("User not found.");
+    throw new Error("Student partner not found or account is not verified.");
+  }
+
+  // Authorization check: must have accepted study partner connection
+  const isPartner = await prisma.studyPartnerRequest.findFirst({
+    where: {
+      status: "ACCEPTED",
+      OR: [
+        { senderId: userId, receiverId: partnerId },
+        { senderId: partnerId, receiverId: userId },
+      ],
+    },
+  });
+
+  if (!isPartner) {
+    throw new Error("Direct chat is only available between accepted study partners.");
   }
 
   const existingConversations = await prisma.conversation.findMany({
@@ -71,12 +100,7 @@ export const createConversationService = async (
       participants: {
         include: {
           user: {
-            select: {
-              id: true,
-              fullName: true,
-              email: true,
-              profileImage: true,
-            },
+            select: SAFE_USER_SELECT,
           },
         },
       },
@@ -99,12 +123,7 @@ export const getConversationsService = async (
       participants: {
         include: {
           user: {
-            select: {
-              id: true,
-              fullName: true,
-              email: true,
-              profileImage: true,
-            },
+            select: SAFE_USER_SELECT,
           },
         },
       },
@@ -142,12 +161,7 @@ export const getConversationByIdService = async (
       participants: {
         include: {
           user: {
-            select: {
-              id: true,
-              fullName: true,
-              email: true,
-              profileImage: true,
-            },
+            select: SAFE_USER_SELECT,
           },
         },
       },
@@ -165,7 +179,7 @@ export const getConversationByIdService = async (
   });
 
   if (!conversation) {
-    throw new Error("Conversation not found.");
+    throw new Error("Conversation not found or access denied.");
   }
 
   return conversation;

@@ -66,7 +66,7 @@ export const getHelpersByTopic = async (
 ): Promise<void> => {
   try {
     const userId = req.user!.id;
-    const { topicId } = req.params;
+    const topicId = req.params.topicId as string;
 
     const helpers = await findHelpersForTopic(userId, topicId);
 
@@ -92,7 +92,7 @@ export const getLearnersByTopic = async (
 ): Promise<void> => {
   try {
     const userId = req.user!.id;
-    const { topicId } = req.params;
+    const topicId = req.params.topicId as string;
 
     const learners = await findLearnersForTopic(userId, topicId);
 
